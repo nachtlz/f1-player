@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Incluir CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg" style="background: #D90404"">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img class="nav-logo" src="./Items/logo.svg"></img></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                    </div>
+            <div class=" container-fluid">
+            <a class="navbar-brand" href="/"><img class="nav-logo" src="./Items/logo.svg"></img></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
                 </div>
+            </div>
             </div>
         </nav>
     </header>
 
     <div class="container-fluid mt-3">
         <div class="row">
-            <div class="col-md-2">
-                <div class="card bg-danger text-white card-left-first">
-                    <div class="card-body">Hamilton vs Russell</div>
-                </div>
-                <div class="card bg-danger text-white card-left">
-                    <div class="card-body">Hamilton vs Russell</div>
-                </div>
-                <div class="card bg-danger text-white card-left"">
-                    <div class="card-body">Hamilton vs Russell</div>
-                </div>
-                <div class="card bg-danger text-white card-left"">
-                    <div class="card-body">Hamilton vs Russell</div>
-                </div>
-                <div class="card bg-danger text-white card-left"">
-                    <div class="card-body">Hamilton vs Russell</div>
-                </div>
-                <div class="card bg-danger text-white card-left"">
-                    <div class="card-body">Hamilton vs Russell</div>
-                </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="card mb-3">
-                    <video  controls>
+
+            <div class="col-md-8">
+                <div id="video-container" class="card mb-3">
+                    <video id="myVideo">
                         <source src="./video/Adelantamientos(1080).mp4" type="video/mp4" />
+                        <track id="chapterTrack" kind="chapters" label="Chapters" src="./video/vtts/chapters.vtt">
                     </video>
+                    <i id="play-pause-button" class="fas fa-play"></i>
+                    <div id="custom-controls">
+                        <div id="progress-bar">
+                            <div id="progress-bar-fill"></div>
+                        </div>
+                        <div class="controls-container">
+                            <div class="buttons-container">
+                                <div class="rewind-play-forward-container">
+                                    <i id="rewind-button" class="fas fa-backward"></i>
+                                    <i id="play-pause" class="fas fa-play"></i>
+                                    <i id="forward-button" class="fas fa-forward"></i>
+                                </div>
+                                <div class="audio-controller">
+                                    <i id="volume-icon" class="fas fa-volume-down"></i>
+                                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -64,7 +71,8 @@
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="row">
                                 <div class="col-sm">
-                                    <img src="./Items/drivers/1699096820863.png" alt="Fernando Alonso" class="img-fluid" />
+                                    <img src="./Items/drivers/1699096820863.png" alt="Fernando Alonso"
+                                        class="img-fluid" />
                                     <p class="text-driver">Fernando Alonso</p>
                                 </div>
                             </div>
@@ -75,8 +83,16 @@
                                     <p class="text-driver">Carlos Sainz</p>
                                 </div>
                             </div>
+                            <p class="mx-2">VS</p>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <img src="./Items/drivers/1699093995890.png" alt="Carlos Sainz" class="img-fluid" />
+                                    <p class="text-driver">Carlos Sainz</p>
+                                </div>
+                            </div>
+
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -90,11 +106,14 @@
         </div>
     </div>
 
-    
-    
+
+
+    <script src="./js/app.js"></script>
+    <script src="./js/player.js"></script>
     <!-- Incluir jQuery, Popper.js y JavaScript de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

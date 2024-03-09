@@ -1,26 +1,134 @@
-.nav-logo{
+/* Base Styles */
+.nav-logo {
     width: 170px;
     margin-left: 10px;
 }
-.img-fluid{
+
+.img-fluid {
     height: 100px;
 }
-.circuit{
+
+.circuit {
     height: 200px;
 }
 
-.card-left-first,.card-left{
-    cursor: pointer;
-    border-radius: 0.5rem;
-}
-.card-left{
-    margin-top: 1rem;
-}
-.card-left-first:hover, .card-left:hover {
-    transform: scale(1.1);
+.text-driver {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
 }
 
-.text-driver{
-    font-size: 14px;
-    text-align: center;
+/* Video Player Styles */
+#video-container {
+    position: relative;
+}
+
+#custom-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+#play-pause-button {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Progress Bar Styles */
+#progress-bar {
+    position: relative;
+    flex: 1;
+    margin: 0 10px;
+    height: 6px;
+    background-color: #888;
+    cursor: pointer;
+}
+
+#progress-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: red;
+}
+
+#progress-bar:hover #progress-bar-fill {
+    background-color: white;
+}
+
+/* Control Button Styles */
+.controls-container,
+.buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls-container {
+    justify-content: flex-start;
+    margin: 5px 10px;
+}
+
+.audio-controller {
+    display: flex;
+    gap: 10px;
+}
+
+#volume-icon,
+#rewind-button,
+#forward-button,
+#play-pause {
+    color: white;
+    cursor: pointer;
+}
+
+#play-pause {
+    margin-left: 10px;
+}
+
+#forward-button {
+    padding-left: 10px;
+}
+
+/* Chapter Points and Tooltips */
+.chapter-point {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#chapters-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.chapter-title-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    pointer-events: none;
+    background-color: white;
+    width: 100px;
 }
