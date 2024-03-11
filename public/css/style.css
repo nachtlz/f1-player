@@ -18,6 +18,15 @@
     text-align: center;
 }
 
+::cue {
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
+    color: #fff; /* Texto blanco */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado de línea */
+    text-align: center; /* Alineación del texto */
+  
+}
+
 /* Video Player Styles */
 #video-container {
     position: relative;
@@ -27,7 +36,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    
     padding: 5px 10px;
     box-sizing: border-box;
 }
@@ -80,6 +90,12 @@
     margin: 5px 10px;
 }
 
+.controls-container.hidden {
+    opacity: 0;
+    height: 0px;
+}
+
+
 .audio-controller {
     display: flex;
     gap: 10px;
@@ -99,6 +115,10 @@
 
 #forward-button {
     padding-left: 10px;
+}
+
+.current_time,.totalTime{
+    color: white;
 }
 
 /* Chapter Points and Tooltips */

@@ -39,6 +39,7 @@
                     <video id="myVideo">
                         <source src="./video/Adelantamientos(1080).mp4" type="video/mp4" />
                         <track id="chapterTrack" kind="chapters" label="Chapters" src="./video/vtts/chapters.vtt">
+                        <track id="en-sub" kind="subtitles" label="English" src="./video/vtts/subtitles-en.vtt" default>
                     </video>
                     <i id="play-pause-button" class="fas fa-play"></i>
                     <div id="custom-controls">
@@ -55,6 +56,10 @@
                                 <div class="audio-controller">
                                     <i id="volume-icon" class="fas fa-volume-down"></i>
                                     <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                                </div>
+                                <div class="time-container">
+                                    <span class="current_time">0:00</span> <span style="color: white;">/</span><span
+                                        class="totalTime">0:00</span>
                                 </div>
 
                             </div>

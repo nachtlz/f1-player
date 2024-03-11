@@ -7,16 +7,20 @@ function iniciarApp() {
     setupPlayPauseToggle();
     setupVolumeControl();
     setupFastForwardRewind();
+    setUpControlBar();
 }
 
 function setupProgressBar() {
     const video = document.getElementById('myVideo');
     const progressBarFill = document.getElementById('progress-bar-fill');
+    const totalTime = document.querySelector('.totalTime');
+    const currentTime = document.querySelector('.current_time');
 
-    // Actualizar el progreso del video mientras se reproduce
+    video.addEventListener('loadedmetadata', () => totalTime.textContent = formatTime(video.duration))
     video.addEventListener('timeupdate', function () {
         let progress = (video.currentTime / video.duration) * 100;
         progressBarFill.style.width = progress + '%';
+        currentTime.textContent = formatTime(video.currentTime);
     });
 
 
@@ -31,6 +35,15 @@ function setupProgressBar() {
     */
 
 }
+function formatTime(timeInSeconds) {
+    var minutes = Math.floor(timeInSeconds / 60);
+    var seconds = Math.floor(timeInSeconds % 60);
+    // Añadir un 0 adelante si los segundos son menores a 10
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    return minutes + ':' + seconds; // Formato mm:ss
+}
+
+
 function setupPlayPauseToggle() {
     const video = document.getElementById('myVideo');
     const playPauseButton = document.getElementById('play-pause-button');
@@ -134,3 +147,20 @@ function setupFastForwardRewind() {
     forwardButton.addEventListener('click', () => video.currentTime += 5);
     rewindButton.addEventListener('click', () => video.currentTime -= 5);
 }
+function setUpControlBar() {
+    const divFather = document.getElementById('custom-controls');
+    const divControl = document.querySelector('.controls-container');
+    let hideTimer;
+
+    divFather.addEventListener('mouseover', function () {
+        clearTimeout(hideTimer);
+        divControl.classList.remove('hidden');
+    });
+
+    divFather.addEventListener('mouseout', function () {
+        hideTimer = setTimeout(function () {
+            divControl.classList.add('hidden');
+        }, 1000);
+    });
+}
+
