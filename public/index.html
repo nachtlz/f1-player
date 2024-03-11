@@ -39,7 +39,8 @@
                     <video id="myVideo">
                         <source src="./video/Adelantamientos(1080).mp4" type="video/mp4" />
                         <track id="chapterTrack" kind="chapters" label="Chapters" src="./video/vtts/chapters.vtt">
-                        <track id="en-sub" kind="subtitles" label="English" src="./video/vtts/subtitles-en.vtt" default>
+                        <track id="en-sub" kind="subtitles" srclang="en" label="English"
+                            src="./video/vtts/subtitles-en.vtt">
                     </video>
                     <i id="play-pause-button" class="fas fa-play"></i>
                     <div id="custom-controls">
@@ -61,6 +62,57 @@
                                     <span class="current_time">0:00</span> <span style="color: white;">/</span><span
                                         class="totalTime">0:00</span>
                                 </div>
+
+                            </div>
+                            <div class="advanced-features-container" style="gap: 50px;">
+                                <div class="subtitules">
+                                    <i id="subtitles_icon" class="far fa-closed-captioning"></i>
+                                </div>
+                                <div class="settings">
+                                    <i id="setting_icon" class="fas fa-cog"></i>
+                                    <div class="popover_container hidden">
+                                        <div class="popover_options_card">
+                                            <i class="fas fa-sliders-h"></i>
+                                            <button class="popover_options"
+                                                data-target="options_cuality">Calidad</button>
+                                        </div>
+                                        <div class="popover_options_card">
+                                            <i class="fas fa-language"></i>
+                                            <button class="popover_options"
+                                                data-target="options_lenguage">Subtitulos</button>
+
+                                        </div>
+                                        <div class="popover_options_card">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            <button class="popover_options"
+                                                data-target="options_speed">Velocidad</button>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="options_cuality" class="popover_selector_container hidden">
+                                        <i style="color: white;" class="fas fa-arrow-left"></i>
+                                        <button>1080</button>
+                                        <button>720</button>
+                                        <button>480</button>
+                                        <button>Auto</button>
+                                    </div>
+                                    <div id="options_lenguage" class="popover_selector_container hidden">
+                                        <i style="color: white;" class="fas fa-arrow-left"></i>
+                                        <button>Inglés</button>
+                                        <button>Castellano</button>
+                                        <button>Catalán</button>
+                                        <button>Alemán</button>
+                                    </div>
+                                    <div id="options_speed" class="popover_selector_container hidden">
+                                        <i style="color: white;" class="fas fa-arrow-left"></i>
+                                        <button>2</button>
+                                        <button>1</button>
+                                        <button>0.75</button>
+                                        <button>0.5</button>
+                                    </div>
+                                </div>
+
 
                             </div>
 
@@ -110,15 +162,13 @@
             </div>
         </div>
     </div>
-
-
-
     <script src="./js/app.js"></script>
     <script src="./js/player.js"></script>
     <!-- Incluir jQuery, Popper.js y JavaScript de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

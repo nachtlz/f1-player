@@ -8,6 +8,7 @@ function iniciarApp() {
     setupVolumeControl();
     setupFastForwardRewind();
     setUpControlBar();
+    setUpSettingsControl();
 }
 
 function setupProgressBar() {
@@ -148,6 +149,7 @@ function setupFastForwardRewind() {
     rewindButton.addEventListener('click', () => video.currentTime -= 5);
 }
 function setUpControlBar() {
+    const video = document.getElementById('myVideo');
     const divFather = document.getElementById('custom-controls');
     const divControl = document.querySelector('.controls-container');
     let hideTimer;
@@ -155,12 +157,46 @@ function setUpControlBar() {
     divFather.addEventListener('mouseover', function () {
         clearTimeout(hideTimer);
         divControl.classList.remove('hidden');
+
     });
 
     divFather.addEventListener('mouseout', function () {
-        hideTimer = setTimeout(function () {
-            divControl.classList.add('hidden');
-        }, 1000);
+        if (!video.paused) {
+            hideTimer = setTimeout(function () {
+                divControl.classList.add('hidden');
+            }, 1000);
+        }
+
     });
+}
+
+function setUpSettingsControl() {
+    const settingsIcon = document.getElementById('setting_icon');
+    const popContainer = document.querySelector('.popover_container');
+    const popOverOptions = document.querySelectorAll('.popover_options')
+    console.log(popOverOptions);
+    settingsIcon.addEventListener('click', function () {
+        if (popContainer.classList.contains('hidden')) {
+            popContainer.classList.remove('hidden');
+        } else {
+            popContainer.classList.add('hidden');
+        }
+    })
+    popOverOptions.forEach(option => {
+        option.addEventListener('click', function () {
+            popContainer.classList.add('hidden');
+            let containerSlector = document.getElementById(this.getAttribute('data-target'))
+            containerSlector.classList.remove('hidden');
+        })
+    });
+    document.addEventListener('click', function (e) {
+        if (!settingsIcon.contains(e.target) && !popContainer.contains(e.target)) {
+            popContainer.classList.add('hidden');
+            // Oculta todos los contenedores de opciones
+            document.querySelectorAll('.popover_selector_container').forEach(container => {
+                container.classList.add('hidden');
+            });
+        }
+    }, true);
 }
 
