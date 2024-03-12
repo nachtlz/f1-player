@@ -110,15 +110,26 @@ ch_6
 ch_7
 00:04:58.000 --> 00:05:56.000
 {
-    "title" : "Alonso VS Sainz",
-    "drivers":[
+    "title": "Alonso VS Sainz",
+    "drivers": [
         {
-            "driver" : "Alonso",
-            "image" : "./Items/drivers/alonso.png"
+            "driver": "Alonso",
+            "image": "./Items/drivers/alonso.png"
         },
         {
-            "driver" : "Sainz",
-            "image" : "./Items/drivers/sainz.png"
+            "driver": "Sainz",
+            "image": "./Items/drivers/sainz.png"
+        }
+    ],
+    "questions": [
+        {
+            "question": "¿Quién consiguió más podios en la temporada 2022-2023?",
+            "options": [
+                
+                    "Alonso",
+                    "Sainz"  
+            ],
+            "correct": 0
         }
     ]
 }

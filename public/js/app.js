@@ -115,6 +115,8 @@ function metadataManagment() {
                 let data = JSON.parse(cue.text);
                 if (track.label === 'Drivers_Circuits') {
                     updateInfoDrivers(data);
+                } else if (track.label === 'questions') {
+                    updateQuestion(data)
                 }
             }
         });
@@ -150,5 +152,56 @@ function updateInfoDrivers(data) {
         }
     })
 }
+function updateQuestion(questions) {
+    const video = document.getElementById('myVideo');
+    video.pause();
 
+    const divQuestions = document.querySelector('.question-container');
+    divQuestions.classList.remove('hidden');
+
+    const divAnswer = document.getElementById('answers');
+    divAnswer.innerHTML = '';
+
+    const p = document.querySelector('.question-title');
+    p.textContent = questions.question;
+
+    let allButtons = [];
+    let selected_btn = null;
+    let option_selected = -1;
+
+    questions.options.forEach((option, index) => {
+        const buttonAnswer = document.createElement('button');
+        buttonAnswer.className = "answer-button";
+        buttonAnswer.textContent = option;
+        buttonAnswer.addEventListener('click', function () {
+            allButtons.forEach(btn => btn.classList.remove('clicked'));
+            buttonAnswer.classList.add('clicked');
+            option_selected = index;
+            selected_btn = buttonAnswer;
+        });
+        divAnswer.appendChild(buttonAnswer);
+        allButtons.push(buttonAnswer);
+    });
+
+
+    setTimeout(() => {
+        if (option_selected !== -1 && option_selected === questions.correct) {
+            selected_btn.classList.remove('clicked');
+            selected_btn.classList.add('correct');
+            let correctCount = parseInt(localStorage.getItem('correct') || '0');
+            correctCount += 1;
+            localStorage.setItem('correct', correctCount.toString());
+
+        } else if (option_selected !== -1) {
+            selected_btn.classList.remove('clicked');
+            selected_btn.classList.add('wrong');
+        }
+        setTimeout(() => {
+            divQuestions.classList.add('hidden');
+            video.play();
+        }, 1000)
+    }, 5000);
+
+
+}
 

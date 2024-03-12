@@ -9,6 +9,7 @@ function iniciarApp() {
     setupFastForwardRewind();
     setUpControlBar();
     setUpSettingsControl();
+    viewResults(2);
 }
 
 function setupProgressBar() {
@@ -49,6 +50,8 @@ function setupPlayPauseToggle() {
     const video = document.getElementById('myVideo');
     const playPauseButton = document.getElementById('play-pause-button');
     const playPauseIcon = document.getElementById('play-pause');
+    const questionContainer = document.querySelector('.question-container');
+    const resultContainer = document.querySelector('.result-question-container')
 
     playPauseButton.addEventListener('click', function () {
         if (video.paused) {
@@ -82,9 +85,11 @@ function setupPlayPauseToggle() {
     video.addEventListener('play', function () {
         playPauseButton.style.display = 'none';
         playPauseIcon.className = 'fas fa-pause';
+        questionContainer.classList.add('hidden');
+        resultContainer.classList.add('hidden');
 
 
-    })
+    });
     playPauseIcon.addEventListener('click', function () {
         if (video.paused) {
             playPauseIcon.className = 'fas fa-pause';
@@ -216,6 +221,17 @@ function isOpenSelectorPopover() {
     });
 }
 
-
+function viewResults(totalQuesions) {
+    const video = document.getElementById('myVideo');
+    const questionContainer = document.querySelector('.question-container');
+    const resultContainer = document.querySelector('.result-question-container')
+    const result = document.querySelector('.result');
+    video.addEventListener('ended', function () {
+        const correct = localStorage.getItem('correct');
+        questionContainer.classList.add('hidden');
+        result.textContent = `Has acertado ${correct} de ${totalQuesions} preguntas`
+        resultContainer.classList.remove('hidden');
+    })
+}
 
 

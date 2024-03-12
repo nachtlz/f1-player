@@ -1,0 +1,24 @@
+WEBVTT
+
+00:00:25.000 --> 00:00:30.000
+ {
+    "question": "¿Cuántos mundiales ha ganado Hammilton",
+    "options": [
+        "Uno",
+        "Dos" , 
+        "Ocho",
+        "Ninguno"
+        ],
+    "correct": 2
+}
+
+
+00:05:25.000 --> 00:05:30.000
+ {
+    "question": "¿Quién consiguió más podios en la temporada 2022-2023?",
+    "options": [
+        "Alonso",
+        "Sainz"  
+        ],
+    "correct": 0
+}
