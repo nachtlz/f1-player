@@ -173,12 +173,20 @@ function setUpControlBar() {
 function setUpSettingsControl() {
     const settingsIcon = document.getElementById('setting_icon');
     const popContainer = document.querySelector('.popover_container');
-    const popOverOptions = document.querySelectorAll('.popover_options')
-    console.log(popOverOptions);
+    const popOverOptions = document.querySelectorAll('.popover_options');
+    const arrowsLeft = document.querySelectorAll('.fa-arrow-left');
     settingsIcon.addEventListener('click', function () {
-        if (popContainer.classList.contains('hidden')) {
+
+        if (popContainer.classList.contains('hidden') && isOpenSelectorPopover()) {
+            document.querySelectorAll('.popover_selector_container').forEach(container => {
+                container.classList.add('hidden');
+            });
+        }
+        else if (popContainer.classList.contains('hidden')) {
             popContainer.classList.remove('hidden');
-        } else {
+
+        }
+        else {
             popContainer.classList.add('hidden');
         }
     })
@@ -189,14 +197,25 @@ function setUpSettingsControl() {
             containerSlector.classList.remove('hidden');
         })
     });
-    document.addEventListener('click', function (e) {
-        if (!settingsIcon.contains(e.target) && !popContainer.contains(e.target)) {
-            popContainer.classList.add('hidden');
-            // Oculta todos los contenedores de opciones
-            document.querySelectorAll('.popover_selector_container').forEach(container => {
-                container.classList.add('hidden');
-            });
-        }
-    }, true);
+
+
+    arrowsLeft.forEach(arrowLeft => {
+        arrowLeft.addEventListener('click', function () {
+            let containerSlector = document.getElementById(this.getAttribute('data-target'))
+            containerSlector.classList.add('hidden');
+            popContainer.classList.remove('hidden');
+
+
+        })
+    })
 }
+
+function isOpenSelectorPopover() {
+    return Array.from(document.querySelectorAll('.popover_selector_container')).some(container => {
+        return !container.classList.contains('hidden');
+    });
+}
+
+
+
 

@@ -21,8 +21,7 @@
 ::cue {
     background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
     color: #fff; /* Texto blanco */
-    font-size: 16px; /* Tamaño de fuente */
-    line-height: 1.5; /* Espaciado de línea */
+    font-size: 14px; /* Tamaño de fuente */
     text-align: center; /* Alineación del texto */
   
 }
@@ -116,6 +115,10 @@
 #subtitles_icon{
     font-size: 20px;
 }
+#subtitles_icon.fa-closed-captioning.active {
+    box-shadow: 0 2px 0 red; /* X-offset, Y-offset, blur-radius, color */
+}
+
 
 #play-pause {
     margin-left: 10px;
@@ -186,6 +189,10 @@
 .popover_selector_container.hidden{
     display: none;
 }
+.fa-arrow-left{
+    color: white;
+    cursor: pointer;
+}
 
 
 /* Chapter Points and Tooltips */
@@ -216,6 +223,8 @@
     position: absolute;
     bottom: 30px;
     pointer-events: none;
-    background-color: white;
+    border: 1px solid hwb(0 80% 20%);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100px;
+    color: white;
 }

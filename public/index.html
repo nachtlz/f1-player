@@ -41,6 +41,9 @@
                         <track id="chapterTrack" kind="chapters" label="Chapters" src="./video/vtts/chapters.vtt">
                         <track id="en-sub" kind="subtitles" srclang="en" label="English"
                             src="./video/vtts/subtitles-en.vtt">
+                        <track id="es-sub" kind="subtitles" srclang="es" label="Spanish"
+                            src="./video/vtts/subtitles-es.vtt">
+                        <track id="metadata-1" kind="metadata" label="Drivers_Circuits" src="./video/vtts/metadata.vtt">
                     </video>
                     <i id="play-pause-button" class="fas fa-play"></i>
                     <div id="custom-controls">
@@ -91,21 +94,21 @@
                                     </div>
 
                                     <div id="options_cuality" class="popover_selector_container hidden">
-                                        <i style="color: white;" class="fas fa-arrow-left"></i>
+                                        <i data-target="options_cuality" class="fas fa-arrow-left"></i>
                                         <button>1080</button>
                                         <button>720</button>
                                         <button>480</button>
                                         <button>Auto</button>
                                     </div>
                                     <div id="options_lenguage" class="popover_selector_container hidden">
-                                        <i style="color: white;" class="fas fa-arrow-left"></i>
-                                        <button>Inglés</button>
-                                        <button>Castellano</button>
-                                        <button>Catalán</button>
-                                        <button>Alemán</button>
+                                        <i data-target="options_lenguage" class="fas fa-arrow-left"></i>
+                                        <button class="button-lenguage" value="en">Inglés</button>
+                                        <button class="button-lenguage" value="es">Castellano</button>
+                                        <button class="button-lenguage" value="cat">Catalán</button>
+                                        <button class="button-lenguage" value="ger">Alemán</button>
                                     </div>
                                     <div id="options_speed" class="popover_selector_container hidden">
-                                        <i style="color: white;" class="fas fa-arrow-left"></i>
+                                        <i data-target="options_speed" class="fas fa-arrow-left"></i>
                                         <button>2</button>
                                         <button>1</button>
                                         <button>0.75</button>
@@ -125,7 +128,8 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Current battle</h5>
-                        <div class="d-flex align-items-center justify-content-center">
+                        <div id="driversInfoContainer" class="d-flex align-items-center justify-content-center">
+                            <!--
                             <div class="row">
                                 <div class="col-sm">
                                     <img src="./Items/drivers/1699096820863.png" alt="Fernando Alonso"
@@ -147,6 +151,7 @@
                                     <p class="text-driver">Carlos Sainz</p>
                                 </div>
                             </div>
+                            -->
 
                         </div>
 
