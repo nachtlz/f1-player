@@ -18,6 +18,30 @@
     text-align: center;
 }
 
+/* Battle Drivers Styles*/
+.battle_container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.battle_container.hidden{
+    display: none;
+}
+.image_driver_battle{
+    height: 100px;
+}
+.driver_name_battle{
+    display: flex;
+    gap: 10px;
+}
+.driver_name_battle img{
+    height: 15px;
+    margin-top: 5px;
+}
+.driver_name_battle p{
+    font-weight: bold;
+    font-size: 15px;
+}
 ::cue {
     background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
     color: #fff; /* Texto blanco */
@@ -289,4 +313,59 @@
 
 .result-question-container.hidden{
     display: none;
+}
+
+/* ESTILOS PRIMERA PERSONA */
+
+.first_person_container.hidden{
+    display: none
+
+}
+
+.escuderia-container{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+.escuderia-text{
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.escuderia_logo{
+    height: 40px;
+}
+.info-hidden{
+    display: none !important;
+}
+
+.driver_container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.img_driver{
+    margin-top: -15px;
+    height: 50px;
+}
+.driver_name{
+    display: flex;
+    gap :10px;
+}
+.driver_name p{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.driver_name img{
+    height: 20px;
+}
+.car_img_container{
+    background-image: url("/public/Items/grid.jpg");
+    display: flex;
+    justify-content: center;
+}
+.car_img_container img{
+    height: 100px;
 }

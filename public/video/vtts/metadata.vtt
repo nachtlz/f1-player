@@ -6,12 +6,14 @@ ch_1
     "title" : "Hamilton vs Russell",
     "drivers":[
         {
-            "driver" : "Hamilton",
-            "image" : "./Items/drivers/hamilton.png"
+            "driver" : "Lewis Hamilton",
+            "image" : "./Items/drivers/hamilton.png",
+            "bandera" : "./Items/bandera/uk.png"
         },
         {
-            "driver" : "Russell",
-            "image" : "./Items/drivers/russel.png"
+            "driver" : "George Russell",
+            "image" : "./Items/drivers/russel.png",
+            "bandera" : "./Items/bandera/uk.png"
         }
     ]
 }
@@ -22,16 +24,19 @@ ch_2
     "title" : "Hulkenberg VS Tsounda VS Zhou",
     "drivers":[
         {
-            "driver" : "Hulkenberg",
-            "image" : "./Items/drivers/hulkenberg.png"
+            "driver" : "Nico Hulkenberg",
+            "image" : "./Items/drivers/hulkenberg.png",
+            "bandera" : "./Items/bandera/ger.png"
         },
         {
-            "driver" : "Tsounda",
-            "image" : "./Items/drivers/tsunoda.png"
+            "driver" : "Yuki Tsounda",
+            "image" : "./Items/drivers/tsunoda.png",
+            "bandera" : "./Items/bandera/jap.png"
         },
          {
-            "driver" : "Zhou",
-            "image" : "./Items/drivers/guanyu.png"
+            "driver" : "Zhou Guanyu",
+            "image" : "./Items/drivers/guanyu.png",
+            "bandera" : "./Items/bandera/ch.png"
         }
     ]
 }
@@ -42,16 +47,19 @@ ch_3
     "title" : "Perez VS Albon VS Sainz",
     "drivers":[
         {
-            "driver" : "Perez",
-            "image" : "./Items/drivers/perez.png"
+            "driver" : "Sergio Perez",
+            "image" : "./Items/drivers/perez.png",
+            "bandera" : "./Items/bandera/mx.png"
         },
         {
-            "driver" : "Albon",
-            "image" : "./Items/drivers/albon.png"
+            "driver" : "Alexander Albon",
+            "image" : "./Items/drivers/albon.png",
+            "bandera" : "./Items/bandera/tal.png"
         },
          {
-            "driver" : "Sainz",
-            "image" : "./Items/drivers/sainz.png"
+            "driver" : "Carlos Sainz",
+            "image" : "./Items/drivers/sainz.png",
+            "bandera" : "./Items/bandera/es.png"
         }
     ]
 }
@@ -62,12 +70,14 @@ ch_4
     "title" : "Perez VS Piastri",
     "drivers":[
         {
-            "driver" : "Perez",
-            "image" : "./Items/drivers/perez.png"
+            "driver" : "Sergio Perez",
+            "image" : "./Items/drivers/perez.png",
+            "bandera" : "./Items/bandera/mx.png"
         },
         {
-            "driver" : "Piastri",
-            "image" : "./Items/drivers/piastri.png"
+            "driver" : "Oscar Piastri",
+            "image" : "./Items/drivers/piastri.png",
+            "bandera" : "./Items/bandera/aus.png"
         }
     ]
 }
@@ -80,12 +90,14 @@ ch_5
     "title" : "Ocon VS Gasly",
     "drivers":[
         {
-            "driver" : "Ocon",
-            "image" : "./Items/drivers/ocon.png"
+            "driver" : "Esteban Ocon",
+            "image" : "./Items/drivers/ocon.png",
+            "bandera" : "./Items/bandera/fr.png"
         },
         {
-            "driver" : "Gasly",
-            "image" : "./Items/drivers/gasly.png"
+            "driver" : "Pierre Gasly",
+            "image" : "./Items/drivers/gasly.png",
+            "bandera" : "./Items/bandera/fr.png"
         }
     ]
 }
@@ -96,12 +108,14 @@ ch_6
     "title" : "Sainz VS Leclerc",
     "drivers":[
         {
-            "driver" : "Sainz",
-            "image" : "./Items/drivers/sainz.png"
+            "driver" : "Carlos Sainz",
+            "image" : "./Items/drivers/sainz.png",
+            "bandera" : "./Items/bandera/es.png"
         },
         {
-            "driver" : "Leclerc",
-            "image" : "./Items/drivers/leclerc.png"
+            "driver" : "Charles Leclerc",
+            "image" : "./Items/drivers/leclerc.png",
+            "bandera" : "./Items/bandera/mon.png"
         }
     ]
 }
@@ -113,23 +127,14 @@ ch_7
     "title": "Alonso VS Sainz",
     "drivers": [
         {
-            "driver": "Alonso",
-            "image": "./Items/drivers/alonso.png"
+            "driver": "Fernando Alonso",
+            "image": "./Items/drivers/alonso.png",
+            "bandera" : "./Items/bandera/es.png"
         },
         {
-            "driver": "Sainz",
-            "image": "./Items/drivers/sainz.png"
-        }
-    ],
-    "questions": [
-        {
-            "question": "¿Quién consiguió más podios en la temporada 2022-2023?",
-            "options": [
-                
-                    "Alonso",
-                    "Sainz"  
-            ],
-            "correct": 0
+            "driver": "Carlos Sainz",
+            "image": "./Items/drivers/sainz.png",
+            "bandera" : "./Items/bandera/es.png"
         }
     ]
 }
@@ -140,12 +145,14 @@ ch_8
     "title" : "Alonso VS Gasly",
     "drivers":[
         {
-            "driver" : "Alonso",
-            "image" : "./Items/drivers/alonso.png"
+            "driver" : "Fernando Alonso",
+            "image" : "./Items/drivers/alonso.png",
+            "bandera" : "./Items/bandera/es.png"
         },
         {
-            "driver" : "Gasly",
-            "image" : "./Items/drivers/gasly.png"
+            "driver" : "Pierre Gasly",
+            "image" : "./Items/drivers/gasly.png",
+            "bandera" : "./Items/bandera/fr.png"
         }
     ]
 }
@@ -156,12 +163,14 @@ ch_9
     "title" : "Alonso VS Perez",
     "drivers":[
         {
-            "driver" : "Alonso",
-            "image" : "./Items/drivers/alonso.png"
+            "driver" : "Fernando Alonso",
+            "image" : "./Items/drivers/alonso.png",
+            "bandera" : "./Items/bandera/es.png"
         },
         {
-            "driver" : "Perez",
-            "image" : "./Items/drivers/perez.png"
+            "driver" : "Sergio Perez",
+            "image" : "./Items/drivers/perez.png",
+            "bandera" : "./Items/bandera/mx.png"
         }
     ]
 }
@@ -172,16 +181,19 @@ ch_10
     "title" : "Perez VS Ocon VS Alonso",
     "drivers":[
         {
-            "driver" : "Perez",
-            "image" : "./Items/drivers/perez.png"
+            "driver" : "Sergio Perez",
+            "image" : "./Items/drivers/perez.png",
+            "bandera" : "./Items/bandera/mx.png"
         },
         {
-            "driver" : "Ocon",
-            "image" : "./Items/drivers/ocon.png"
+            "driver" : "Esteban Ocon",
+            "image" : "./Items/drivers/ocon.png",
+            "bandera" : "./Items/bandera/fr.png"
         },
          {
-            "driver" : "Alonso",
-            "image" : "./Items/drivers/alonso.png"
+            "driver" : "Fernando Alonso",
+            "image" : "./Items/drivers/alonso.png",
+            "bandera" : "./Items/bandera/es.png"
         }
     ]
 }

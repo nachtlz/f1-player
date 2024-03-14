@@ -2,144 +2,161 @@ WEBVTT
 
 00:00:40.000 --> 00:00:58.000
 {
-    "driver": "Hamilton",
-    "img" : "./Items/drivers/hulkenberg.png",
+    "driver": "Lewis Hamilton",
+    "img" : "./Items/drivers/hamilton.png",
     "car" :"./Items/coches/mercedes/mercedes_car.png",
     "logo" : "./Items/coches/mercedes/mercedes.png",
-    "bandera" : "./Items/bandera/uk.png"
+    "bandera" : "./Items/bandera/uk.png",
+    "escuderia" : "Mercedes"
 }
 
 00:01:30.000 --> 00:01:41.000
 {
-    "driver" :"Tsounda",
-    "img" : "./Items/drivers/tsounda.png",
+    "driver" :"Yuki Tsounda",
+    "img" : "./Items/drivers/tsunoda.png",
     "car" :"./Items/coches/rb/rb_car.png",
     "logo" : "./Items/coches/rb/rb.png",
-    "bandera" : "./Items/bandera/jap.png"
+    "bandera" : "./Items/bandera/jap.png",
+    "escuderia" : "RB"
 }
 
 00:02:12.000 --> 00:02:24.000
 {
-    "driver" :"Albon",
+    "driver" :"Alexander Albon",
     "img" : "./Items/drivers/albon.png",
     "car" :"./Items/coches/williams/williams_car.png",
     "logo" : "./Items/coches/williams/williams.png",
-    "bandera" : "./Items/bandera/tal.png"
+    "bandera" : "./Items/bandera/tal.png",
+    "escuderia" : "Williams"
 }
 
 00:03:31.000 --> 00:03:46.000
 {
-    "driver" :"Ocon",
+    "driver" :"Esteban Ocon",
     "img" : "./Items/drivers/ocon.png",
     "car" :"./Items/coches/alpine/alpine_car.png",
     "logo" : "./Items/coches/alpine/alpine.png",
-    "bandera" : "./Items/bandera/fr.png"
+    "bandera" : "./Items/bandera/fr.png",
+    "escuderia" : "Alpine"
 }
 
 00:03:51.000 --> 00:03:58.000
 {
-    "driver" :"Gasly",
+    "driver" :"Pierre Gasly",
     "img" : "./Items/drivers/gasly.png",
     "car" :"./Items/coches/alpine/alpine_car.png",
     "logo" : "./Items/coches/alpine/alpine.png",
-    "bandera" : "./Items/bandera/fr.png"
+    "bandera" : "./Items/bandera/fr.png",
+     "escuderia" : "Alpine"   
 }
 
 00:04:08.000 --> 00:04:13.000
 {
-    "driver" :"Leclerc",
+    "driver" :"Charles Leclerc",
     "img" : "./Items/drivers/leclerc.png",
     "car" :"./Items/coches/ferrari/ferrari_car.png",
     "logo" : "./Items/coches/ferrari/ferrari.png",
-    "bandera" : "./Items/bandera/mon.png"
+    "bandera" : "./Items/bandera/mon.png",
+    "escuderia" : "Ferrari"
 }
 
 00:04:24.000 --> 00:04:37.000
 {
-    "driver" :"Sainz",
+    "driver" :"Carlos Sainz",
     "img" : "./Items/drivers/sainz.png",
     "car" :"./Items/coches/ferrari/ferrari_car.png",
     "logo" : "./Items/coches/ferrari/ferrari.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+    "escuderia" : "Ferrari"
 }
 
 00:04:48.000 --> 00:04:58.000
 {
-    "driver" :"Leclerc",
+    "driver" :"Charles Leclerc",
     "img" : "./Items/drivers/leclerc.png",
     "car" :"./Items/coches/ferrari/ferrari_car.png",
     "logo" : "./Items/coches/ferrari/ferrari.png",
-    "bandera" : "./Items/bandera/mon.png"
+    "bandera" : "./Items/bandera/mon.png",
+    "escuderia" : "Ferrari"
 }
 
 00:05:03.000 --> 00:05:07.000
 {
-    "driver" :"Alonso",
+    "driver" :"Fernando Alonso",
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+    "escuderia" : "Aston Martin"
 }
 
 00:05:18.000 --> 00:05:28.000
 {
-    "driver" :"Alonso",
+    "driver" :"Fernando Alonso",
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+    "escuderia" : "Aston Martin"
 }
 
 00:05:38.000 --> 00:05:47.000
 {
-    "driver" :"Alonso",
+    "driver" :"Fernando Alonso",
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+    "escuderia" : "Aston Martin"
+   
 }
 
 00:06:38.000 --> 00:06:43.000
 {
-    "driver" :"Gasly",
+    "driver" :"Pierre Gasly",
     "img" : "./Items/drivers/gasly.png",
     "car" :"./Items/coches/alpine/alpine_car.png",
     "logo" : "./Items/coches/alpine/alpine.png",
-    "bandera" : "./Items/bandera/fr.png"
+    "bandera" : "./Items/bandera/fr.png",
+     "escuderia" : "Alpine"
 }
 
 00:06:47.000 --> 00:07:01.000
 {
-    "driver" :"Alonso",
+    "driver" :"Fernando Alonso",
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+     "escuderia" : "Aston Martin"
 }
 
 00:07:30.000 --> 00:07:44.000
 {
-    "driver" :"Alonso",
+    "driver" :"Fernando Alonso",
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+    "escuderia" : "Aston Martin"
 }
 
 00:08:02.000 --> 00:08:11.000
 {
-    "driver" :"Alonso",
+    "driver" :"Fernando Alonso",
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png"
+    "bandera" : "./Items/bandera/esp.png",
+    "escuderia" : "Aston Martin"
 }
 
 00:08:23.000 --> 00:08:52.000
 {
-    "driver" :"Ocon",
+    "driver" :"Esteban Ocon",
     "img" : "./Items/drivers/ocon.png",
     "car" :"./Items/coches/alpine/alpine_car.png",
     "logo" : "./Items/coches/alpine/alpine.png",
-    "bandera" : "./Items/bandera/fr.png"
+    "bandera" : "./Items/bandera/fr.png",
+    "escuderia" : "Alpine"
 }

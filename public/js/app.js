@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
             metadataTracks.push(tracks[i]);
         }
     }
-    console.log(subtitlesTracks);
-    console.log(metadataTracks);
     chaptersManagment();
     setupLanguageButtons();
     setupSubtitlesIcon();
@@ -117,6 +115,8 @@ function metadataManagment() {
                     updateInfoDrivers(data);
                 } else if (track.label === 'questions') {
                     updateQuestion(data)
+                } else if (track.label === 'firstPerson') {
+                    setFirstPerson(data);
                 }
             }
         });
@@ -124,25 +124,32 @@ function metadataManagment() {
 }
 
 function updateInfoDrivers(data) {
-    const container = document.getElementById('driversInfoContainer');
+    const container = document.getElementById('driversBattleContainer');
+    const firstPersonContainer = document.getElementById('driverFirstPerson');
+
     container.innerHTML = '';
+    firstPersonContainer.classList.add('hidden');
     data.drivers.forEach((driver, index) => {
-        const driverContainer = document.createElement('div');
-        driver.className = 'row';
-        const driverContainerInfo = document.createElement('div');
-        driverContainerInfo.className = 'col-sm';
-        const img = document.createElement('img');
-        img.src = driver.image;
-        img.alt = driver.driver;
-        img.className = 'img-fluid';
+        const battleItem = document.createElement('div');
+        driver.className = 'battle_item';
+        const driverNameContainer = document.createElement('div');
+        driverNameContainer.className = 'driver_name_battle';
+        const img_driver = document.createElement('img');
+        img_driver.src = driver.image;
+        img_driver.alt = driver.driver;
+        img_driver.className = 'image_driver_battle';
         const p = document.createElement('p');
         p.textContent = driver.driver;
-        p.className = 'text-driver';
+        const img_flag = document.createElement('img');
+        img_flag.className = "flag_driver";
+        img_flag.src = driver.bandera;
 
-        driverContainerInfo.appendChild(img);
-        driverContainerInfo.appendChild(p);
-        driverContainer.appendChild(driverContainerInfo);
-        container.appendChild(driverContainer);
+        driverNameContainer.appendChild(p);
+        driverNameContainer.append(img_flag);
+        battleItem.appendChild(img_driver);
+        battleItem.appendChild(driverNameContainer);
+
+        container.appendChild(battleItem);
 
         if (index < data.drivers.length - 1) {
             const vs = document.createElement('p');
@@ -151,6 +158,7 @@ function updateInfoDrivers(data) {
             container.appendChild(vs);
         }
     })
+    container.classList.remove('hidden');
 }
 function updateQuestion(questions) {
     const video = document.getElementById('myVideo');
@@ -201,6 +209,60 @@ function updateQuestion(questions) {
             video.play();
         }, 1000)
     }, 5000);
+
+
+}
+function setFirstPerson(driver) {
+    const battleContainer = document.getElementById('driversBattleContainer');
+    const firstPersonContainer = document.getElementById('driverFirstPerson');
+
+    battleContainer.classList.add('hidden');
+    firstPersonContainer.innerHTML = '';
+
+
+    const escuderiaContainer = document.createElement('div');
+    escuderiaContainer.className = 'escuderia-container';
+    const escuderia_name = document.createElement('p');
+    escuderia_name.className = 'escuderia-text';
+    escuderia_name.textContent = driver.escuderia;
+    const logo_escuderia = document.createElement('img');
+    logo_escuderia.className = 'escuderia_logo';
+    logo_escuderia.src = driver.logo;
+    escuderiaContainer.appendChild(escuderia_name)
+    escuderiaContainer.appendChild(logo_escuderia);
+
+    const driverContainer = document.createElement('div');
+    driverContainer.className = 'driver_container';
+
+    const driverNameContainer = document.createElement('div');
+    driverNameContainer.className = 'driver_name';
+    const name = document.createElement('p');
+    name.textContent = driver.driver
+    const img_flag = document.createElement('img');
+    img_flag.className = "flag_driver";
+    img_flag.src = driver.bandera;
+    driverNameContainer.appendChild(name);
+    driverNameContainer.appendChild(img_flag);
+
+    const img_driver = document.createElement('img');
+    img_driver.src = driver.img;
+    img_driver.alt = driver.driver;
+    img_driver.className = 'img_driver';
+
+    driverContainer.appendChild(driverNameContainer)
+    driverContainer.appendChild(img_driver);
+
+    const carContainer = document.createElement('div');
+    carContainer.className = 'car_img_container';
+    const img_car = document.createElement('img');
+    img_car.src = driver.car;
+    img_car.alt = driver.driver
+    carContainer.appendChild(img_car)
+
+    firstPersonContainer.appendChild(escuderiaContainer);
+    firstPersonContainer.appendChild(driverContainer);
+    firstPersonContainer.appendChild(carContainer);
+    firstPersonContainer.classList.remove('hidden');
 
 
 }

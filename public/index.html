@@ -45,6 +45,7 @@
                             src="./video/vtts/subtitles-es.vtt">
                         <track id="metadata-1" kind="metadata" label="Drivers_Circuits" src="./video/vtts/metadata.vtt">
                         <track id="metadata-2" kind="metadata" label="questions" src="./video/vtts/questions.vtt">
+                        <track id="metadata-3" kind="metadata" label="firstPerson" src="./video/vtts/firstPerson.vtt">
                     </video>
                     <div class="question-container hidden">
                         <p class="question-title"></p>
@@ -139,29 +140,49 @@
             <div class="col-md-5">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">Current battle</h5>
-                        <div id="driversInfoContainer" class="d-flex align-items-center justify-content-center">
+                        <div id="driversBattleContainer" class="battle_container">
 
                         </div>
+                        <div id="driverFirstPerson" class="first_person_container hidden">
+                            <!--
+                            <div class="escuderia-container">
 
+                                <p class="escuderia-text">Aston Martin</p>
+                                <img class="escuderia_logo" src="./Items/coches/aston/aston.png">
+                            </div>
+                            <div class="driver_container">
+                                <div class="driver_name">
+                                    <p>Fernando <strong>Alonso</strong></p>
+                                    <img class="flag_driver" src="./Items/bandera/es.png">
+                                </div>
+                                <img class="img_driver" src="./Items/drivers/alonso.png">
+
+                            </div>
+                            <div class="car_img_container">
+                                <img src="./Items/coches/aston/aston_car.png">
+                            </div>
+                        </div>
+                        -->
+
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img-top circuit" src="./Items/circuits/1699117852730.svg" alt="Shakir, Bahrain" />
-                    <div class="card-body">
-                        <p class="card-text">Descripción o datos del circuito</p>
+                    <div class="card">
+                        <img class="card-img-top circuit" src="./Items/circuits/1699117852730.svg"
+                            alt="Shakir, Bahrain" />
+                        <div class="card-body">
+                            <p class="card-text">Descripción o datos del circuito</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./js/app.js"></script>
-    <script src="./js/player.js"></script>
-    <!-- Incluir jQuery, Popper.js y JavaScript de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/player.js"></script>
+        <!-- Incluir jQuery, Popper.js y JavaScript de Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
