@@ -11,7 +11,7 @@ ch_1
         },
         {
             "driver" : "Russell",
-            "image" : "./Items/drivers/russell.png"
+            "image" : "./Items/drivers/russel.png"
         }
     ]
 }
@@ -27,11 +27,11 @@ ch_2
         },
         {
             "driver" : "Tsounda",
-            "image" : "./Items/drivers/tsounda.png"
+            "image" : "./Items/drivers/tsunoda.png"
         },
          {
             "driver" : "Zhou",
-            "image" : "./Items/drivers/zhou.png"
+            "image" : "./Items/drivers/guanyu.png"
         }
     ]
 }

@@ -231,6 +231,7 @@ function viewResults(totalQuesions) {
         questionContainer.classList.add('hidden');
         result.textContent = `Has acertado ${correct} de ${totalQuesions} preguntas`
         resultContainer.classList.remove('hidden');
+        localStorage.setItem('correct', 0)
     })
 }
 
