@@ -15,7 +15,16 @@ ch_1
             "image" : "./Items/drivers/russel.png",
             "bandera" : "./Items/bandera/uk.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2023",
+		"circuito": "SUZUKA INTERNATIONAL RACING COURSE",
+		"pais": "Japón",
+		"bandera": "./Items/bandera/jap.png",
+		"image": "./Items/circuitos/suzuka/suzuka_info.png",
+		"fecha": "22-24",
+		"mes": "SEP"
+	}
 }
 
 ch_2
@@ -38,7 +47,16 @@ ch_2
             "image" : "./Items/drivers/guanyu.png",
             "bandera" : "./Items/bandera/ch.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2023",
+		"circuito": "CIRCUIT DE BARCELONA-CATALUNYA",
+		"pais": "España",
+		"bandera": "./Items/bandera/es.png",
+		"image": "./Items/circuitos/barcelona/barcelona_info.png",
+		"fecha": "02-04",
+		"mes": "JUN"
+	}
 }
 
 ch_3
@@ -61,7 +79,16 @@ ch_3
             "image" : "./Items/drivers/sainz.png",
             "bandera" : "./Items/bandera/es.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2023",
+		"circuito": "SILVERSTONE CIRCUIT",
+		"pais": "Gran Bretaña",
+		"bandera": "./Items/bandera/uk.png",
+		"image": "./Items/circuitos/silverstone/silverstone_info.png",
+		"fecha": "07-09",
+		"mes": "JUL"
+	}
 }
 
 ch_4
@@ -79,7 +106,16 @@ ch_4
             "image" : "./Items/drivers/piastri.png",
             "bandera" : "./Items/bandera/aus.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 HUNGARIAN GRAND PRIX 2023",
+		"circuito": "HUNGARORING",
+		"pais": "Hungría",
+		"bandera": "./Items/bandera/hun.png",
+		"image": "./Items/circuitos/hungaroring/hungaroring_info.png",
+		"fecha": "21-23",
+		"mes": "JUL"
+	}
 }
 
 
@@ -99,7 +135,16 @@ ch_5
             "image" : "./Items/drivers/gasly.png",
             "bandera" : "./Items/bandera/fr.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2023",
+		"circuito": "LAS VEGAS STRIP CIRCUIT",
+		"pais": "Estados Unidos",
+		"bandera": "./Items/bandera/usa.png",
+		"image": "./Items/circuitos/vegas/vegas_info.png",
+		"fecha": "17-19",
+		"mes": "NOV"
+	}
 }
 
 ch_6
@@ -117,7 +162,16 @@ ch_6
             "image" : "./Items/drivers/leclerc.png",
             "bandera" : "./Items/bandera/mon.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2023",
+		"circuito": "AUTODROMO NAZIONALE MONZA",
+		"pais": "Italia",
+		"bandera": "./Items/bandera/ita.png",
+		"image": "./Items/circuitos/monza/monza_info.png",
+		"fecha": "01-03",
+		"mes": "SEP"
+	}
 }
 
 
@@ -136,7 +190,16 @@ ch_7
             "image": "./Items/drivers/sainz.png",
             "bandera" : "./Items/bandera/es.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2023",
+		"circuito": "BAHRAIN INTERNATIONAL CIRCUIT",
+		"pais": "Baréin",
+		"bandera": "./Items/bandera/bar.png",
+		"image": "./Items/circuitos/bahrain/bahrain_info.png",
+		"fecha": "03-05",
+		"mes": "MAR"
+	}
 }
 
 ch_8
@@ -154,7 +217,16 @@ ch_8
             "image" : "./Items/drivers/gasly.png",
             "bandera" : "./Items/bandera/fr.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2023",
+		"circuito": "AUTÓDROMO JOSÉ CARLOS PACE",
+		"pais": "Brasil",
+		"bandera": "./Items/bandera/bra.png",
+		"image": "./Items/circuitos/brasil/brasil_info.png",
+		"fecha": "03-05",
+		"mes": "NOV"
+	}
 }
 
 ch_9
@@ -172,7 +244,16 @@ ch_9
             "image" : "./Items/drivers/perez.png",
             "bandera" : "./Items/bandera/mx.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2023",
+		"circuito": "AUTÓDROMO JOSÉ CARLOS PACE",
+		"pais": "Brasil",
+		"bandera": "./Items/bandera/bra.png",
+		"image": "./Items/circuitos/brasil/brasil_info.png",
+		"fecha": "03-05",
+		"mes": "NOV"
+	}
 }
 
 ch_10
@@ -195,6 +276,14 @@ ch_10
             "image" : "./Items/drivers/alonso.png",
             "bandera" : "./Items/bandera/es.png"
         }
-    ]
+    ],
+	"circuito": {
+		"name": "FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2023",
+		"circuito": "MARINA BAY STREET CIRCUIT",
+		"pais": "Singapur",
+		"bandera": "./Items/bandera/sin.png",
+		"image": "./Items/circuitos/singapore/singapore_info.png",
+		"fecha": "15-17",
+		"mes": "SEP"
+	}
 }
-

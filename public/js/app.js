@@ -126,8 +126,10 @@ function metadataManagment() {
 function updateInfoDrivers(data) {
     const container = document.getElementById('driversBattleContainer');
     const firstPersonContainer = document.getElementById('driverFirstPerson');
+    const circuitContainer = document.getElementById('circuit_container');
 
     container.innerHTML = '';
+    circuitContainer.innerHTML = '';
     firstPersonContainer.classList.add('hidden');
     data.drivers.forEach((driver, index) => {
         const battleItem = document.createElement('div');
@@ -157,8 +159,75 @@ function updateInfoDrivers(data) {
             vs.textContent = 'VS';
             container.appendChild(vs);
         }
-    })
+    });
+
     container.classList.remove('hidden');
+
+    // Procesa la información del circuito
+    const circuitImageContainer = document.createElement('div');
+    circuitImageContainer.className = 'circuit_image_container';
+
+    const circuitImage = document.createElement('img');
+    circuitImage.className = 'circuit_image';
+    circuitImage.src = data.circuito.image;
+
+    circuitImageContainer.appendChild(circuitImage);
+    circuitContainer.appendChild(circuitImageContainer);
+
+    const circuitInfoContainer = document.createElement('div');
+    circuitInfoContainer.className = 'circuit_info_container';
+
+    const dateCircuitContainer = document.createElement('div');
+    dateCircuitContainer.className = 'date_circuit_container';
+
+    const dateContent = document.createElement('div');
+    dateContent.className = 'date_content';
+
+    const dataCircuit = document.createElement('h3');
+    dataCircuit.className = 'data_circuit';
+    dataCircuit.textContent = data.circuito.fecha;
+
+    const mesCircuit = document.createElement('p');
+    mesCircuit.className = 'mes_circuit';
+    mesCircuit.textContent = data.circuito.mes;
+
+    dateContent.appendChild(dataCircuit);
+    dateContent.appendChild(mesCircuit);
+
+    const flagCircuit = document.createElement('img');
+    flagCircuit.className = 'flag_circuit';
+    flagCircuit.src = data.circuito.bandera;
+
+    dateCircuitContainer.appendChild(dateContent);
+    dateCircuitContainer.appendChild(flagCircuit);
+
+    const descriptionContainer = document.createElement('div');
+    descriptionContainer.className = 'description_container';
+
+    const countryCircuitContainer = document.createElement('div');
+    countryCircuitContainer.className = 'country_circuit_container';
+
+    const countryCircuit = document.createElement('h2');
+    countryCircuit.className = 'country_circuit';
+    countryCircuit.textContent = data.circuito.pais;
+
+    const chevronRightIcon = document.createElement('i');
+    chevronRightIcon.className = 'fas fa-chevron-right';
+
+    countryCircuitContainer.appendChild(countryCircuit);
+    countryCircuitContainer.appendChild(chevronRightIcon);
+
+    const descriptionCircuit = document.createElement('p');
+    descriptionCircuit.className = 'description_circuit';
+    descriptionCircuit.textContent = data.circuito.circuito;
+
+    descriptionContainer.appendChild(countryCircuitContainer);
+    descriptionContainer.appendChild(descriptionCircuit);
+
+    circuitInfoContainer.appendChild(dateCircuitContainer);
+    circuitInfoContainer.appendChild(descriptionContainer);
+
+    circuitContainer.appendChild(circuitInfoContainer);
 }
 function updateQuestion(questions) {
     const video = document.getElementById('myVideo');

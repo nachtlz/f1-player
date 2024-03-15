@@ -66,7 +66,7 @@ WEBVTT
     "img" : "./Items/drivers/sainz.png",
     "car" :"./Items/coches/ferrari/ferrari_car.png",
     "logo" : "./Items/coches/ferrari/ferrari.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
     "escuderia" : "Ferrari"
 }
 
@@ -86,7 +86,7 @@ WEBVTT
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
     "escuderia" : "Aston Martin"
 }
 
@@ -96,7 +96,7 @@ WEBVTT
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
     "escuderia" : "Aston Martin"
 }
 
@@ -106,7 +106,7 @@ WEBVTT
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
     "escuderia" : "Aston Martin"
    
 }
@@ -127,7 +127,7 @@ WEBVTT
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
      "escuderia" : "Aston Martin"
 }
 
@@ -137,7 +137,7 @@ WEBVTT
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
     "escuderia" : "Aston Martin"
 }
 
@@ -147,7 +147,7 @@ WEBVTT
     "img" : "./Items/drivers/alonso.png",
     "car" :"./Items/coches/aston/aston_car.png",
     "logo" : "./Items/coches/aston/aston.png",
-    "bandera" : "./Items/bandera/esp.png",
+    "bandera" : "./Items/bandera/es.png",
     "escuderia" : "Aston Martin"
 }
 
