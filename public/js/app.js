@@ -217,11 +217,17 @@ function updateInfoDrivers(data) {
     countryCircuitContainer.appendChild(countryCircuit);
     countryCircuitContainer.appendChild(chevronRightIcon);
 
+    const nameCircuitPrix = document.createElement('p');
+    nameCircuitPrix.className = 'prix_name_circuit';
+    nameCircuitPrix.textContent = data.circuito.name;
+
     const descriptionCircuit = document.createElement('p');
     descriptionCircuit.className = 'description_circuit';
     descriptionCircuit.textContent = data.circuito.circuito;
 
     descriptionContainer.appendChild(countryCircuitContainer);
+    descriptionContainer.appendChild(nameCircuitPrix);
+
     descriptionContainer.appendChild(descriptionCircuit);
 
     circuitInfoContainer.appendChild(dateCircuitContainer);

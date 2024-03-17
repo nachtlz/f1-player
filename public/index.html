@@ -8,7 +8,8 @@
     <!-- Incluir CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link href="https://db.onlinewebfonts.com/c/4944f4308352f169f622b1f098fa2203?family=Formula1+Display+Wide"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -32,7 +33,7 @@
 
     <div class="container-fluid mt-3">
         <div class="row">
-            <div class="col-md-7 custom-column-container">
+            <div class="col-md-6 custom-column-container">
                 <div id="video-container" class="card mb-3">
                     <video id="myVideo">
                         <source src="./video/Adelantamientos(1080).mp4" type="video/mp4" />
@@ -45,10 +46,13 @@
                         <track id="metadata-2" kind="metadata" label="questions" src="./video/vtts/questions.vtt">
                         <track id="metadata-3" kind="metadata" label="firstPerson" src="./video/vtts/firstPerson.vtt">
                     </video>
-                    <div class="question-container hidden">
-                        <p class="question-title"></p>
+                    <div class="question-container">
+                        <p class="question-title">¿Es Hamilton Negro?</p>
 
                         <div id="answers" class="answer-button-container">
+                            <button class="answer-button">Verdadero</button>
+                            <button class="answer-button">Falso</button>
+
                         </div>
                     </div>
                     <div class="result-question-container hidden">
@@ -73,7 +77,7 @@
                                     <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
                                 </div>
                                 <div class="time-container">
-                                    <span class="current_time">0:00</span> <span style="color: white;">/</span><span
+                                    <span class="current_time">0:00</span> <span style="color: white;">/ </span><span
                                         class="totalTime">0:00</span>
                                 </div>
 
@@ -160,17 +164,18 @@
                 </div>
             </div>
 
-            <div class="col-md-5">
-                <div class="card mb-3">
-                    <div class="card-body">
+            <div class="col-md-6">
+                <div class="card mb-3" style="border-left: none; border-bottom: none; border-radius: 1rem;">
+                    <div class="card-body border_custom_container">
                         <div id="driversBattleContainer" class="battle_container">
 
                         </div>
                         <div id="driverFirstPerson" class="first_person_container hidden">
                         </div>
                     </div>
-
-                    <div class="card">
+                </div>
+                <div class="card mb-3" style="border-left: none; border-bottom: none; border-radius: 1rem;">
+                    <div class="card-body border_custom_container">
                         <img class="card-img-top circuit" src="./Items/circuits/1699117852730.svg"
                             alt="Shakir, Bahrain" />
                         <div class="card-body">

@@ -1,3 +1,12 @@
+p,a,h1,h2,h3,h4,h5{
+    font-family: "Formula1 Display Wide";
+}
+.border_custom_container{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 0 10px 0 0;
+
+}
 /* Base Styles */
 .nav-logo {
     width: 170px;
@@ -42,21 +51,43 @@
 }
 .driver_name_battle{
     display: flex;
+    justify-content: space-between;
     gap: 10px;
 }
 .driver_name_battle img{
-    height: 15px;
-    margin-top: 5px;
+    height: 25px;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 .driver_name_battle p{
     font-weight: bold;
-    font-size: 15px;
+    margin-top: 2%;
+    font-size: 10px;
+}
+@media (max-width: 768px) {
+    .battle_container{
+        display: grid;
+        justify-content: center;
+    }
+    .image_driver_battle{
+        height: 50px;
+    }
+    .driver_name_battle{
+        justify-content: normal;
+    }
+    .driver_name_battle p{
+        font-size: 10px;
+    }
+    .driver_name_battle img{
+        height: 15px;
+    }
 }
 ::cue {
     background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
     color: #fff; /* Texto blanco */
     font-size: 14px; /* Tamaño de fuente */
     text-align: center; /* Alineación del texto */
+    line-height: 100px;
   
 }
 
@@ -153,7 +184,6 @@
     box-shadow: 0 2px 0 red; /* X-offset, Y-offset, blur-radius, color */
 }
 
-
 #play-pause {
     margin-left: 10px;
 }
@@ -227,6 +257,18 @@
     color: white;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .rewind-play-forward-container{
+        display: none;
+    }    
+    .audio-controller{
+        width: 50%;
+    }
+    #volume-slider{
+        width: 40%;
+    }
+
+}
 
 
 /* Chapter Points and Tooltips */
@@ -280,7 +322,9 @@
     display: none;
 }
 .question-title{
-    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 .answer-button-container {
     display: grid;
@@ -303,7 +347,6 @@
 .answer-button.correct{
     background-color: green;
 }
-
 .result-question-container{
     position: absolute;
     top: 50%; 
@@ -324,6 +367,11 @@
 .result-question-container.hidden{
     display: none;
 }
+@media(max-width :768px){
+    .question-container{
+        top: 40%;
+    }
+}
 
 /* ESTILOS PRIMERA PERSONA */
 
@@ -331,21 +379,22 @@
     display: none
 
 }
-
 .escuderia-container{
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    align-items: center;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
     width: 100%;
 }
 .escuderia-text{
     font-weight: bold;
-    font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin: 0;
 }
 .escuderia_logo{
-    height: 40px;
+    margin: 10px;
+    height: 50px;
 }
 .info-hidden{
     display: none !important;
@@ -366,13 +415,14 @@
 }
 .driver_name p{
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
 }
 .driver_name img{
     height: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+
 }
 .car_img_container{
-    background-image: url("/public/Items/grid.jpg");
+    background-image: url("../Items/grid.jpg");
     display: flex;
     justify-content: center;
 }
@@ -383,13 +433,14 @@
 /* CIRCUIT INFO STYLES */
 
 #circuit_container{
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 0 10px 0 0;
+
 }
 .circuit_image_container{
     width: 75%;
-    background-image: url("/public/Items/grid.jpg");
+    background-image: url("../Items/grid.jpg");
     display: flex;
     justify-content: center;
 }
@@ -399,12 +450,14 @@
 .date_circuit_container{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border-bottom: 0.5px solid black;
 }
+
 .flag_circuit{
-    height: 80px;
-    width: 80px;
-    padding: 10px;
+    height: 45px;
+    margin: 5px 5px;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 .date_content{
     padding: 5px;
@@ -412,48 +465,66 @@
 .mes_circuit{
     background-color: black;
     color: white;
-    width: 75%;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: -5px;
+    display: inline-block;
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 1px;
 }
 .description_container{
     display: block;
-
+}
+.description_circuit{
+    font-size: 8px;
+    padding: 5px;
+}
+.prix_name_circuit{
+    padding: 3px;
+    font-size: 10px;
+    color: red;
+    margin: 0;
 }
 .country_circuit_container{
     padding: 5px;
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 .country_circuit_container h2{
-    font-size: 30px;
+    font-size: 10px;
     font-weight: bold;
+    margin: 0;
 }
 .country_circuit_container i{
-    margin-top: 15px;
     color: #FF6E33;
+}
+.data_circuit{
+    font-size: 20px;
+    margin: 0;
 }
 @media (max-width: 768px) {
     .data_circuit{
-        font-size:20px;
+        font-size:15px;
     }
     .mes_circuit{
         width: 90%;
-        font-size: 20px;
+        font-size: 15px;
     }
     .flag_circuit{
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
     }
     .country_circuit_container h2{
-        font-size: 20px;
+        font-size: 12px;
     }
     .country_circuit_container i{
-        margin-top: 5px;
+        margin-top: -5px;
+    }
+    .circuit_image_container img{
+        height: 120px;
     }
     .description_circuit{
-        font-size: 15px;
+        font-size: 9px;
     }
    
 }
