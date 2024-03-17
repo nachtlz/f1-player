@@ -11,7 +11,8 @@
     <link href="https://db.onlinewebfonts.com/c/4944f4308352f169f622b1f098fa2203?family=Formula1+Display+Wide"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <link rel="icon" sizes="192x192" href="./Items/logo.avif" type="image/x-icon">
+    <title>F1 Player</title>
 </head>
 
 <body>
@@ -34,6 +35,8 @@
     <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-md-6 custom-column-container">
+                <div id="video-overlay" class="video-overlay hidden"></div>
+
                 <div id="video-container" class="card mb-3">
                     <video id="myVideo">
                         <source src="./video/Adelantamientos(1080).mp4" type="video/mp4" />
@@ -46,17 +49,15 @@
                         <track id="metadata-2" kind="metadata" label="questions" src="./video/vtts/questions.vtt">
                         <track id="metadata-3" kind="metadata" label="firstPerson" src="./video/vtts/firstPerson.vtt">
                     </video>
-                    <div class="question-container">
-                        <p class="question-title">¿Es Hamilton Negro?</p>
+                    <div class="question-container hidden">
+                        <p class="question-title"></p>
 
                         <div id="answers" class="answer-button-container">
-                            <button class="answer-button">Verdadero</button>
-                            <button class="answer-button">Falso</button>
 
                         </div>
                     </div>
                     <div class="result-question-container hidden">
-                        <p class="result">Has Acertado 10/10</p>
+                        <p class="result"></p>
 
                     </div>
 
@@ -124,10 +125,10 @@
                                     </div>
                                     <div id="options_speed" class="popover_selector_container hidden">
                                         <i data-target="options_speed" class="fas fa-arrow-left"></i>
-                                        <button>0.5</button>
-                                        <button>1</button>
-                                        <button>1.5</button>
-                                        <button>2</button>
+                                        <button class="button-speed" value="0.5">0.5</button>
+                                        <button class="button-speed" value="1">1</button>
+                                        <button class="button-speed" value="1.5">1.5</button>
+                                        <button class="button-speed" value="2">2</button>
                                     </div>
                                 </div>
 
@@ -174,6 +175,7 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="card mb-3" style="border-left: none; border-bottom: none; border-radius: 1rem;">
                     <div class="card-body border_custom_container">
                         <img class="card-img-top circuit" src="./Items/circuits/1699117852730.svg"
@@ -183,6 +185,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </div>
         <script src="./js/app.js"></script>

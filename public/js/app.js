@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
             metadataTracks.push(tracks[i]);
         }
     }
+    localStorage.setItem('correct', 0);
+
     chaptersManagment();
     setupLanguageButtons();
     setupSubtitlesIcon();
@@ -46,8 +48,8 @@ function chaptersManagment() {
             chapterPoint.appendChild(titleTooltip);
 
             setupTooltipDisplay(chapterPoint);
-
-            chapterPoint.addEventListener('click', function () {
+            chapterPoint.addEventListener('click', function (event) {
+                event.stopPropagation();
                 video.currentTime = cue.startTime;
                 video.play();
             });
@@ -238,9 +240,25 @@ function updateInfoDrivers(data) {
 function updateQuestion(questions) {
     const video = document.getElementById('myVideo');
     video.pause();
-
+    const videoOverlay = document.getElementById('video-overlay');
+    videoOverlay.classList.remove('hidden');
     const divQuestions = document.querySelector('.question-container');
     divQuestions.classList.remove('hidden');
+
+    // Crear y añadir la barra de tiempo
+    const timeBarContainer = document.createElement('div');
+    timeBarContainer.className = 'time-bar-container';
+    const timeBar = document.createElement('div');
+    timeBar.className = 'time-bar';
+    timeBarContainer.appendChild(timeBar);
+    divQuestions.appendChild(timeBarContainer);
+
+    // Establece la animación de la barra de tiempo
+    timeBar.style.transition = 'width 5s linear';
+    timeBar.style.width = '100%'; // Inicia la barra en 100% de ancho
+    setTimeout(() => {
+        timeBar.style.width = '0%'; // Reduce a 0% de ancho en 5 segundos
+    }, 100);
 
     const divAnswer = document.getElementById('answers');
     divAnswer.innerHTML = '';
@@ -266,7 +284,6 @@ function updateQuestion(questions) {
         allButtons.push(buttonAnswer);
     });
 
-
     setTimeout(() => {
         if (option_selected !== -1 && option_selected === questions.correct) {
             selected_btn.classList.remove('clicked');
@@ -279,14 +296,17 @@ function updateQuestion(questions) {
             selected_btn.classList.remove('clicked');
             selected_btn.classList.add('wrong');
         }
+
         setTimeout(() => {
             divQuestions.classList.add('hidden');
             video.play();
+            videoOverlay.classList.add('hidden');
+
+            divQuestions.removeChild(timeBarContainer); // Elimina la barra de tiempo
         }, 1000)
     }, 5000);
-
-
 }
+
 function setFirstPerson(driver) {
     const battleContainer = document.getElementById('driversBattleContainer');
     const firstPersonContainer = document.getElementById('driverFirstPerson');

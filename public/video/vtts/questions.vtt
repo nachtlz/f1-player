@@ -1,24 +1,109 @@
 WEBVTT
 
 00:00:25.000 --> 00:00:30.000
- {
-    "question": "¿ Cuántos mundiales ha ganado Hammilton ?",
-    "options": [
-        "Uno",
-        "Dos" , 
-        "Ocho",
-        "Ninguno"
-        ],
-    "correct": 2
+{
+  "question": "¿En qué equipo compite Hamilton?",
+  "options": [
+    "Red Bull",
+    "Ferrari",
+    "Mercedes"
+
+  ],
+  "correct": 2
 }
 
-
-00:05:25.000 --> 00:05:30.000
- {
-    "question": "¿ Quién consiguió más podios en la temporada 2022-2023 ?",
-    "options": [
-        "Alonso",
-        "Sainz"  
-        ],
-    "correct": 0
+00:01:01.000 --> 00:01:06.000
+{
+  "question": "¿De qué país es originario Hulkenberg?",
+  "options": [
+    "Alemania",
+    "Francia",
+    "Brasil",
+    "Australia"
+  ],
+  "correct": 0
 }
+
+00:01:46.000 --> 00:01:51.000
+{
+  "question": "¿Cuántas victorias tiene Perez en su carrera hasta la fecha?",
+  "options": [
+    "1",
+    "3",
+    "5",
+    "7"
+  ],
+  "correct": 2
+}
+
+00:02:27.000 --> 00:02:32.000
+{
+  "question": "¿Qué piloto es novato en la temporada 2023?",
+  "options": [
+    "Perez",
+    "Piastri"
+  ],
+  "correct": 1
+}
+
+00:03:13.000 --> 00:03:18.000
+{
+  "question": "¿Quién es el compañero de equipo de Ocon en la temporada 2023?",
+  "options": [
+    "Gasly",
+    "Alonso"
+  ],
+  "correct": 0
+}
+
+00:04:08.000 --> 00:04:13.000
+{
+  "question": "¿Quién logró la mejor posición en el campeonato mundial?",
+  "options": [
+    "Sainz",
+    "Leclerc"
+  ],
+  "correct": 1
+}
+
+00:04:59.000 --> 00:05:04.000
+{
+  "question": "¿Cuál de estos pilotos ha sido campeón del mundo?",
+  "options": [
+    "Alonso",
+    "Sainz"
+  ],
+  "correct": 0
+}
+
+00:05:58.000 --> 00:06:03.000
+{
+  "question": "¿Cuál de estos pilotos ha competido en más equipos de F1?",
+  "options": [
+    "Alonso",
+    "Gasly"
+  ],
+  "correct": 0
+}
+
+00:07:03.000 --> 00:07:08.000
+{
+  "question": "¿Cuál de estos pilotos ha logrado un podio en Mónaco?",
+  "options": [
+    "Alonso",
+    "Perez"
+  ],
+  "correct": 1
+}
+
+00:07:47.000 --> 00:07:52.000
+{
+  "question": "¿Quién consiguió más puntos en la temporada 2023?",
+  "options": [
+    "Ocon",
+    "Perez",
+    "Alonso"
+  ],
+  "correct": 1
+}
+

@@ -9,7 +9,8 @@ function iniciarApp() {
     setupFastForwardRewind();
     setUpControlBar();
     setUpSettingsControl();
-    viewResults(2);
+    viewResults(10);
+    sepeedVideoManagment();
 }
 
 function setupProgressBar() {
@@ -17,7 +18,7 @@ function setupProgressBar() {
     const progressBarFill = document.getElementById('progress-bar-fill');
     const totalTime = document.querySelector('.totalTime');
     const currentTime = document.querySelector('.current_time');
-
+    const progressBar = document.getElementById('progress-bar');
     video.addEventListener('loadedmetadata', () => totalTime.textContent = formatTime(video.duration))
     video.addEventListener('timeupdate', function () {
         let progress = (video.currentTime / video.duration) * 100;
@@ -27,14 +28,15 @@ function setupProgressBar() {
 
 
     // Controlar el progreso del video al hacer clic en la barra de progreso
-    /*
+
     progressBar.addEventListener('click', function (event) {
-        var posX = event.pageX - progressBar.offsetLeft;
-        var totalWidth = progressBar.clientWidth;
+        var rect = progressBar.getBoundingClientRect(); // Obtiene las coordenadas del elemento
+        var posX = event.clientX - rect.left; // Calcula la posición X del clic dentro del elemento
+        var totalWidth = rect.width; // Usa el ancho del rectángulo en lugar de clientWidth
         var progress = (posX / totalWidth) * video.duration;
         video.currentTime = progress;
     });
-    */
+
 
 }
 function formatTime(timeInSeconds) {
@@ -235,4 +237,13 @@ function viewResults(totalQuesions) {
     })
 }
 
+function sepeedVideoManagment() {
+    const buttons_speed = document.querySelectorAll('.button-speed')
+    const video = document.getElementById('myVideo');
+    buttons_speed.forEach(button => {
+        button.addEventListener('click', function () {
+            video.playbackRate = parseFloat(button.value);
+        })
+    })
+}
 

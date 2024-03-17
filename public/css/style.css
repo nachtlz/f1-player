@@ -1,6 +1,18 @@
 p,a,h1,h2,h3,h4,h5{
     font-family: "Formula1 Display Wide";
 }
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+}
+.video-overlay.hidden{
+    display: none;
+}
 .border_custom_container{
     border-top: 2px solid black;
     border-right: 2px solid black;
@@ -86,8 +98,7 @@ p,a,h1,h2,h3,h4,h5{
     background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
     color: #fff; /* Texto blanco */
     font-size: 14px; /* Tamaño de fuente */
-    text-align: center; /* Alineación del texto */
-    line-height: 100px;
+    text-align: start;
   
 }
 
@@ -313,7 +324,7 @@ p,a,h1,h2,h3,h4,h5{
     left: 50%; 
     transform: translate(-50%, -50%); 
     z-index: 10; 
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(164, 5, 5, 0.7); 
     color: white;
     padding: 20px;
     border-radius: 10px; 
@@ -334,6 +345,9 @@ p,a,h1,h2,h3,h4,h5{
 }
 
 .answer-button{
+    background-color: white;
+    border: black;
+    color: black;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 5px;
@@ -362,6 +376,16 @@ p,a,h1,h2,h3,h4,h5{
     color: #155724;
     font-size: 20px;
     font-weight: bold;
+}
+.time-bar-container {
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+}
+
+.time-bar {
+    height: 100%;
+    background-color: #4CAF50;
 }
 
 .result-question-container.hidden{
