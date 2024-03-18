@@ -94,6 +94,25 @@ p,a,h1,h2,h3,h4,h5{
         height: 15px;
     }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .battle_container{
+        display: grid;
+        justify-content: center;
+    }
+    .image_driver_battle{
+        height: 50px;
+    }
+    .driver_name_battle{
+        justify-content: normal;
+    }
+    .driver_name_battle p{
+        font-size: 10px;
+    }
+    .driver_name_battle img{
+        height: 15px;
+    }
+}
+
 ::cue {
     background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
     color: #fff; /* Texto blanco */
@@ -278,7 +297,17 @@ p,a,h1,h2,h3,h4,h5{
     #volume-slider{
         width: 40%;
     }
-
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .rewind-play-forward-container{
+        display: none;
+    }    
+    .audio-controller{
+        width: 50%;
+    }
+    #volume-slider{
+        width: 40%;
+    }
 }
 
 
@@ -343,7 +372,6 @@ p,a,h1,h2,h3,h4,h5{
     gap: 10px;
     justify-content: center;
 }
-
 .answer-button{
     background-color: white;
     border: black;
@@ -394,6 +422,12 @@ p,a,h1,h2,h3,h4,h5{
 @media(max-width :768px){
     .question-container{
         top: 40%;
+    }
+    .question-title{
+        font-size: 15px;
+    }
+    .answer-button{
+        font-size: 15px;
     }
 }
 
@@ -549,6 +583,40 @@ p,a,h1,h2,h3,h4,h5{
     }
     .description_circuit{
         font-size: 9px;
+    }  
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .circuit_image_container img{
+        height: 100px;
     }
-   
+}
+
+/*REAL TIME CIRCUIT*/
+#circuit_real_time_container{
+    display: flex;
+}
+.circuit_real_time{
+    height: 80%;
+    width: 80%;
+}
+.text_driver_real_time{
+    font-size: 10px;
+}
+.circuito {
+    position: relative;
+    width: 100%;
+}
+
+.piloto {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background-color: red; 
+    border-radius: 50%; 
+}
+
+.centro {
+    top: 54%; 
+    left: 55%;
+    transform: translate(-50%, -50%);
 }

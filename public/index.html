@@ -38,7 +38,7 @@
                 <div id="video-overlay" class="video-overlay hidden"></div>
 
                 <div id="video-container" class="card mb-3">
-                    <video id="myVideo">
+                    <video id="myVideo" playsinline preload="auto">
                         <source src="./video/Adelantamientos(1080).mp4" type="video/mp4" />
                         <track id="chapterTrack" kind="chapters" label="Chapters" src="./video/vtts/chapters.vtt">
                         <track id="en-sub" kind="subtitles" srclang="en" label="English"
@@ -175,17 +175,19 @@
                         </div>
                     </div>
                 </div>
-                <!--
+
                 <div class="card mb-3" style="border-left: none; border-bottom: none; border-radius: 1rem;">
-                    <div class="card-body border_custom_container">
-                        <img class="card-img-top circuit" src="./Items/circuits/1699117852730.svg"
-                            alt="Shakir, Bahrain" />
-                        <div class="card-body">
-                            <p class="card-text">Descripción o datos del circuito</p>
+                    <div id="circuit_real_time_container" class="card-body border_custom_container">
+                        <div class="circuito">
+                            <img class="card-img-top circuit_real_time" src="./Items/circuitos/barcelona/barcelona.png">
+                            <div class="piloto centro"></div>
+                        </div>
+                        <div class="circuit_real_time_name_container">
+                            <p class="text_driver_real_time" style="color: #D90404;">Carlos Sainz</p>
+                            <p class="text_driver_real_time" style="color: blue;">Fernando Alonso</p>
                         </div>
                     </div>
                 </div>
-                -->
             </div>
         </div>
         <script src="./js/app.js"></script>

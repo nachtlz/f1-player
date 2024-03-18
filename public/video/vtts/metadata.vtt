@@ -22,6 +22,7 @@ ch_1
 		"pais": "Japón",
 		"bandera": "./Items/bandera/jap.png",
 		"image": "./Items/circuitos/suzuka/suzuka_info.png",
+		"realtime": "./Items/circuitos/suzuka/suzuka.png",
 		"fecha": "22-24",
 		"mes": "SEP"
 	}
@@ -54,6 +55,7 @@ ch_2
 		"pais": "España",
 		"bandera": "./Items/bandera/es.png",
 		"image": "./Items/circuitos/barcelona/barcelona_info.png",
+		"realtime": "./Items/circuitos/barcelona/barcelona.png",
 		"fecha": "02-04",
 		"mes": "JUN"
 	}
@@ -86,6 +88,7 @@ ch_3
 		"pais": "Gran Bretaña",
 		"bandera": "./Items/bandera/uk.png",
 		"image": "./Items/circuitos/silverstone/silverstone_info.png",
+		"realtime": "./Items/circuitos/silverstone/silverstone.png",
 		"fecha": "07-09",
 		"mes": "JUL"
 	}
@@ -113,6 +116,7 @@ ch_4
 		"pais": "Hungría",
 		"bandera": "./Items/bandera/hun.png",
 		"image": "./Items/circuitos/hungaroring/hungaroring_info.png",
+		"realtime": "./Items/circuitos/hungaroring/hungaroring.png",
 		"fecha": "21-23",
 		"mes": "JUL"
 	}
@@ -142,6 +146,7 @@ ch_5
 		"pais": "Estados Unidos",
 		"bandera": "./Items/bandera/usa.png",
 		"image": "./Items/circuitos/vegas/vegas_info.png",
+		"realtime": "./Items/circuitos/vegas/vegas.png",
 		"fecha": "17-19",
 		"mes": "NOV"
 	}
@@ -169,6 +174,7 @@ ch_6
 		"pais": "Italia",
 		"bandera": "./Items/bandera/ita.png",
 		"image": "./Items/circuitos/monza/monza_info.png",
+		"realtime": "./Items/circuitos/monza/monza.png",
 		"fecha": "01-03",
 		"mes": "SEP"
 	}
@@ -197,6 +203,7 @@ ch_7
 		"pais": "Baréin",
 		"bandera": "./Items/bandera/bar.png",
 		"image": "./Items/circuitos/bahrain/bahrain_info.png",
+		"realtime": "./Items/circuitos/bahrain/bahrain.png",
 		"fecha": "03-05",
 		"mes": "MAR"
 	}
@@ -224,6 +231,7 @@ ch_8
 		"pais": "Brasil",
 		"bandera": "./Items/bandera/bra.png",
 		"image": "./Items/circuitos/brasil/brasil_info.png",
+		"realtime": "./Items/circuitos/brasil/brasil.png",
 		"fecha": "03-05",
 		"mes": "NOV"
 	}
@@ -251,6 +259,7 @@ ch_9
 		"pais": "Brasil",
 		"bandera": "./Items/bandera/bra.png",
 		"image": "./Items/circuitos/brasil/brasil_info.png",
+		"realtime": "./Items/circuitos/brasil/brasil.png",
 		"fecha": "03-05",
 		"mes": "NOV"
 	}
@@ -283,6 +292,7 @@ ch_10
 		"pais": "Singapur",
 		"bandera": "./Items/bandera/sin.png",
 		"image": "./Items/circuitos/singapore/singapore_info.png",
+		"realtime": "./Items/circuitos/singapore/singapore.png",
 		"fecha": "15-17",
 		"mes": "SEP"
 	}

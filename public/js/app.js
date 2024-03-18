@@ -1,14 +1,17 @@
 let chaptersTrack = '';
 let subtitlesTracks = [];
 let metadataTracks = [];
+let chaptersRendered = false;
 document.addEventListener('DOMContentLoaded', function () {
     const video = document.getElementById('myVideo');
-
+    setTimeout(() => {
+    }, 1000);
     const tracks = video.textTracks;
     for (let i = 0; i < tracks.length; i++) {
         if (tracks[i].kind === 'chapters') {
             chaptersTrack = tracks[i];
             chaptersTrack.mode = "hidden";
+
         } else if (tracks[i].kind === 'subtitles') {
             tracks[i].mode = 'hidden';
             subtitlesTracks.push(tracks[i]);
@@ -18,45 +21,43 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     localStorage.setItem('correct', 0);
-
-    chaptersManagment();
     setupLanguageButtons();
     setupSubtitlesIcon();
     metadataManagment();
 
+    video.addEventListener('loadedmetadata', () => chaptersManagment());
 })
 
-
 function chaptersManagment() {
-
+    console.log("Estoy Aqui");
     const video = document.getElementById('myVideo');
-    video.addEventListener("loadedmetadata", function () {
-        const cues = chaptersTrack.cues;
-        const duration = video.duration;
-        const progressBar = document.getElementById('progress-bar');
+    const cues = chaptersTrack.cues;
+    const duration = video.duration;
+    const progressBar = document.getElementById('progress-bar');
+    console.log("Duracion", duration);
 
-        for (let i = 0; i < cues.length; i++) {
-            const cue = cues[i];
-            const positionPercent = (cue.startTime / duration) * 100;
-            const chapterPoint = document.createElement('div');
-            chapterPoint.className = 'chapter-point';
-            chapterPoint.style.left = `calc(${positionPercent}%)`;
+    for (let i = 0; i < cues.length; i++) {
+        const cue = cues[i];
+        const positionPercent = (cue.startTime / duration) * 100;
+        const chapterPoint = document.createElement('div');
+        chapterPoint.className = 'chapter-point';
+        chapterPoint.style.left = `calc(${positionPercent}%)`;
 
-            const titleTooltip = document.createElement('div');
-            titleTooltip.className = 'chapter-title-tooltip';
-            titleTooltip.textContent = cue.text;
-            chapterPoint.appendChild(titleTooltip);
+        const titleTooltip = document.createElement('div');
+        titleTooltip.className = 'chapter-title-tooltip';
+        titleTooltip.textContent = cue.text;
+        chapterPoint.appendChild(titleTooltip);
 
-            setupTooltipDisplay(chapterPoint);
-            chapterPoint.addEventListener('click', function (event) {
-                event.stopPropagation();
-                video.currentTime = cue.startTime;
-                video.play();
-            });
+        setupTooltipDisplay(chapterPoint);
+        chapterPoint.addEventListener('click', function (event) {
+            event.stopPropagation();
+            video.currentTime = cue.startTime;
+            video.play();
+        });
+        progressBar.appendChild(chapterPoint);
+    }
+    chaptersRendered = true;
 
-            progressBar.appendChild(chapterPoint);
-        }
-    });
 
 }
 
@@ -236,6 +237,15 @@ function updateInfoDrivers(data) {
     circuitInfoContainer.appendChild(descriptionContainer);
 
     circuitContainer.appendChild(circuitInfoContainer);
+
+    // Procesa la información del circuito en tiempo real
+    const circuit_real_time_container = document.getElementById('circuit_real_time_container');
+    const img_circuit_realTime = document.createElement('img');
+    circuit_real_time_container.innerHTML = '';
+    img_circuit_realTime.className = 'card-img-top circuit_real_time';
+    img_circuit_realTime.src = data.circuito.realtime;
+    circuit_real_time_container.appendChild(img_circuit_realTime);
+
 }
 function updateQuestion(questions) {
     const video = document.getElementById('myVideo');
