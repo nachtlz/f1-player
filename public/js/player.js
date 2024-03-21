@@ -11,6 +11,7 @@ function iniciarApp() {
     setUpSettingsControl();
     viewResults(10);
     sepeedVideoManagment();
+    switchqualityVideo();
 }
 
 function setupProgressBar() {
@@ -132,9 +133,11 @@ function setupVolumeControl() {
 
 function updateVolumeIcon(volume, volumeIcon) {
 
-    if (volume === 0) {
+    if (volume <= 0.05) {
         volumeIcon.className = 'fas fa-volume-mute';
-    } else if (volume <= 0.5) {
+    }
+
+    else if (volume > 0.05 && volume <= 0.5) {
         volumeIcon.className = 'fas fa-volume-down';
     }
     else {
@@ -242,7 +245,40 @@ function sepeedVideoManagment() {
     const video = document.getElementById('myVideo');
     buttons_speed.forEach(button => {
         button.addEventListener('click', function () {
+            buttons_speed.forEach(btn => btn.classList.remove('active'));
             video.playbackRate = parseFloat(button.value);
+            button.classList.add('active');
+        })
+    })
+}
+
+function switchqualityVideo() {
+    const video = document.getElementById('myVideo');
+    const buttonsQuality = document.querySelectorAll('.button_quality');
+    buttonsQuality.forEach(button => {
+        button.addEventListener('click', function () {
+            buttonsQuality.forEach(btn => btn.classList.remove('active'));
+
+            button.classList.add('active');
+            let _time = video.currentTime;
+            switch (button.value) {
+                case "1080":
+                    video.src = './video/Adelantamientos(1080).mp4'
+                    video.currentTime = _time;
+                    break;
+                case "720":
+                    video.src = './video/Adelantamientos(720).mp4'
+                    video.currentTime = _time;
+                    break;
+                case "480":
+                    video.src = './video/Adelantamientos(480).mp4'
+                    video.currentTime = _time;
+                    break;
+                case "auto":
+                    video.src = './video/Adelantamientos(1080).mp4'
+                    video.currentTime = _time;
+                    break;
+            }
         })
     })
 }

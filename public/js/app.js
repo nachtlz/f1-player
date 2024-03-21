@@ -120,6 +120,8 @@ function metadataManagment() {
                     updateQuestion(data)
                 } else if (track.label === 'firstPerson') {
                     setFirstPerson(data);
+                } else {
+                    setRealTime(data);
                 }
             }
         });
@@ -130,9 +132,20 @@ function updateInfoDrivers(data) {
     const container = document.getElementById('driversBattleContainer');
     const firstPersonContainer = document.getElementById('driverFirstPerson');
     const circuitContainer = document.getElementById('circuit_container');
+    const realTimeCircuit = document.getElementById('realTimeCircuit');
+    const realTimeDrivers = document.getElementById('realTimeDrivers');
 
     container.innerHTML = '';
     circuitContainer.innerHTML = '';
+    realTimeDrivers.innerHTML = '';
+
+    // Procesa la información del circuito en tiempo real
+    const img_circuit_realTime = document.createElement('img');
+    realTimeCircuit.innerHTML = '';
+    img_circuit_realTime.className = 'card-img-top circuit_real_time';
+    img_circuit_realTime.src = data.circuito.realtime;
+    realTimeCircuit.appendChild(img_circuit_realTime);
+
     firstPersonContainer.classList.add('hidden');
     data.drivers.forEach((driver, index) => {
         const battleItem = document.createElement('div');
@@ -148,6 +161,15 @@ function updateInfoDrivers(data) {
         const img_flag = document.createElement('img');
         img_flag.className = "flag_driver";
         img_flag.src = driver.bandera;
+        const textDriverRealTime = document.createElement('p');
+        textDriverRealTime.textContent = driver.driver;
+        textDriverRealTime.className = 'text_driver_real_time';
+        textDriverRealTime.style.color = driver.color;
+        const pilotoDiv = document.createElement('div');
+        pilotoDiv.className = driver.class;
+        pilotoDiv.style.top = driver.top;
+        pilotoDiv.style.left = driver.left;
+        realTimeCircuit.appendChild(pilotoDiv);
 
         driverNameContainer.appendChild(p);
         driverNameContainer.append(img_flag);
@@ -155,6 +177,8 @@ function updateInfoDrivers(data) {
         battleItem.appendChild(driverNameContainer);
 
         container.appendChild(battleItem);
+
+        realTimeDrivers.appendChild(textDriverRealTime);
 
         if (index < data.drivers.length - 1) {
             const vs = document.createElement('p');
@@ -237,15 +261,6 @@ function updateInfoDrivers(data) {
     circuitInfoContainer.appendChild(descriptionContainer);
 
     circuitContainer.appendChild(circuitInfoContainer);
-
-    // Procesa la información del circuito en tiempo real
-    const circuit_real_time_container = document.getElementById('circuit_real_time_container');
-    const img_circuit_realTime = document.createElement('img');
-    circuit_real_time_container.innerHTML = '';
-    img_circuit_realTime.className = 'card-img-top circuit_real_time';
-    img_circuit_realTime.src = data.circuito.realtime;
-    circuit_real_time_container.appendChild(img_circuit_realTime);
-
 }
 function updateQuestion(questions) {
     const video = document.getElementById('myVideo');
@@ -368,7 +383,26 @@ function setFirstPerson(driver) {
     firstPersonContainer.appendChild(driverContainer);
     firstPersonContainer.appendChild(carContainer);
     firstPersonContainer.classList.remove('hidden');
+}
 
+function setRealTime(data) {
+    const driver1 = document.getElementsByClassName("firstPiloto")[0];
+    const driver2 = document.getElementsByClassName("secondPiloto")[0];
+    const driver3 = document.getElementsByClassName("thirdPiloto")[0];
 
+    if (driver1) {
+        driver1.style.top = data.firstTop;
+        driver1.style.left = data.firstLeft;
+    }
+
+    if (driver2) {
+        driver2.style.top = data.secondTop;
+        driver2.style.left = data.secondLeft;
+    }
+
+    if (driver3) {
+        driver3.style.top = data.thirdTop;
+        driver3.style.left = data.thirdLeft;
+    }
 }
 

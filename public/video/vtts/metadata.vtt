@@ -8,12 +8,20 @@ ch_1
         {
             "driver" : "Lewis Hamilton",
             "image" : "./Items/drivers/hamilton.png",
-            "bandera" : "./Items/bandera/uk.png"
+            "bandera" : "./Items/bandera/uk.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "45%",
+            "left": "42%"
         },
         {
             "driver" : "George Russell",
             "image" : "./Items/drivers/russel.png",
-            "bandera" : "./Items/bandera/uk.png"
+            "bandera" : "./Items/bandera/uk.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "44%",
+            "left": "42%"
         }
     ],
 	"circuito": {
@@ -36,17 +44,29 @@ ch_2
         {
             "driver" : "Nico Hulkenberg",
             "image" : "./Items/drivers/hulkenberg.png",
-            "bandera" : "./Items/bandera/ger.png"
+            "bandera" : "./Items/bandera/ger.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "45%",
+            "left": "42%"
         },
         {
             "driver" : "Yuki Tsounda",
             "image" : "./Items/drivers/tsunoda.png",
-            "bandera" : "./Items/bandera/jap.png"
+            "bandera" : "./Items/bandera/jap.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "44%",
+            "left": "42%"
         },
          {
             "driver" : "Zhou Guanyu",
             "image" : "./Items/drivers/guanyu.png",
-            "bandera" : "./Items/bandera/ch.png"
+            "bandera" : "./Items/bandera/ch.png",
+            "color": "green",
+            "class": "thirdPiloto",
+            "top": "44%",
+            "left": "42%"
         }
     ],
 	"circuito": {
@@ -69,17 +89,29 @@ ch_3
         {
             "driver" : "Sergio Perez",
             "image" : "./Items/drivers/perez.png",
-            "bandera" : "./Items/bandera/mx.png"
+            "bandera" : "./Items/bandera/mx.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "50%",
+            "left": "74.5%"
         },
         {
             "driver" : "Alexander Albon",
             "image" : "./Items/drivers/albon.png",
-            "bandera" : "./Items/bandera/tal.png"
+            "bandera" : "./Items/bandera/tal.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "48%",
+            "left": "73.5%"
         },
          {
             "driver" : "Carlos Sainz",
             "image" : "./Items/drivers/sainz.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "green",
+            "class": "thirdPiloto",
+            "top": "53%",
+            "left": "74%"
         }
     ],
 	"circuito": {
@@ -102,12 +134,20 @@ ch_4
         {
             "driver" : "Sergio Perez",
             "image" : "./Items/drivers/perez.png",
-            "bandera" : "./Items/bandera/mx.png"
+            "bandera" : "./Items/bandera/mx.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "70%",
+            "left": "80%"
         },
         {
             "driver" : "Oscar Piastri",
             "image" : "./Items/drivers/piastri.png",
-            "bandera" : "./Items/bandera/aus.png"
+            "bandera" : "./Items/bandera/aus.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "70%",
+            "left": "70%"
         }
     ],
 	"circuito": {
@@ -132,12 +172,20 @@ ch_5
         {
             "driver" : "Esteban Ocon",
             "image" : "./Items/drivers/ocon.png",
-            "bandera" : "./Items/bandera/fr.png"
+            "bandera" : "./Items/bandera/fr.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "64%",
+            "left": "75%"
         },
         {
             "driver" : "Pierre Gasly",
             "image" : "./Items/drivers/gasly.png",
-            "bandera" : "./Items/bandera/fr.png"
+            "bandera" : "./Items/bandera/fr.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "62%",
+            "left": "75%"
         }
     ],
 	"circuito": {
@@ -160,12 +208,20 @@ ch_6
         {
             "driver" : "Carlos Sainz",
             "image" : "./Items/drivers/sainz.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "60%",
+            "left": "68%"
         },
         {
             "driver" : "Charles Leclerc",
             "image" : "./Items/drivers/leclerc.png",
-            "bandera" : "./Items/bandera/mon.png"
+            "bandera" : "./Items/bandera/mon.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "59%",
+            "left": "72%"
         }
     ],
 	"circuito": {
@@ -189,12 +245,20 @@ ch_7
         {
             "driver": "Fernando Alonso",
             "image": "./Items/drivers/alonso.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "60%",
+            "left": "68%"
         },
         {
             "driver": "Carlos Sainz",
             "image": "./Items/drivers/sainz.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "59%",
+            "left": "72%"
         }
     ],
 	"circuito": {
@@ -217,12 +281,20 @@ ch_8
         {
             "driver" : "Fernando Alonso",
             "image" : "./Items/drivers/alonso.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "60%",
+            "left": "68%"
         },
         {
             "driver" : "Pierre Gasly",
             "image" : "./Items/drivers/gasly.png",
-            "bandera" : "./Items/bandera/fr.png"
+            "bandera" : "./Items/bandera/fr.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "59%",
+            "left": "72%"
         }
     ],
 	"circuito": {
@@ -245,12 +317,20 @@ ch_9
         {
             "driver" : "Fernando Alonso",
             "image" : "./Items/drivers/alonso.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "60%",
+            "left": "68%"
         },
         {
             "driver" : "Sergio Perez",
             "image" : "./Items/drivers/perez.png",
-            "bandera" : "./Items/bandera/mx.png"
+            "bandera" : "./Items/bandera/mx.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "59%",
+            "left": "72%"
         }
     ],
 	"circuito": {
@@ -273,17 +353,29 @@ ch_10
         {
             "driver" : "Sergio Perez",
             "image" : "./Items/drivers/perez.png",
-            "bandera" : "./Items/bandera/mx.png"
+            "bandera" : "./Items/bandera/mx.png",
+            "color": "red",
+            "class": "firstPiloto",
+            "top": "60%",
+            "left": "68%"
         },
         {
             "driver" : "Esteban Ocon",
             "image" : "./Items/drivers/ocon.png",
-            "bandera" : "./Items/bandera/fr.png"
+            "bandera" : "./Items/bandera/fr.png",
+            "color": "blue",
+            "class": "secondPiloto",
+            "top": "59%",
+            "left": "72%"
         },
          {
             "driver" : "Fernando Alonso",
             "image" : "./Items/drivers/alonso.png",
-            "bandera" : "./Items/bandera/es.png"
+            "bandera" : "./Items/bandera/es.png",
+            "color": "green",
+            "class": "thirdPiloto",
+            "top": "59%",
+            "left": "72%"
         }
     ],
 	"circuito": {

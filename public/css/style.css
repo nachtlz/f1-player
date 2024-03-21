@@ -287,6 +287,13 @@ p,a,h1,h2,h3,h4,h5{
     color: white;
     cursor: pointer;
 }
+.button_quality.active{
+    box-shadow : 0 2px red;
+}
+
+.button-speed.active{
+    box-shadow : 0 2px red;
+}
 @media (max-width: 768px) {
     .rewind-play-forward-container{
         display: none;
@@ -602,21 +609,35 @@ p,a,h1,h2,h3,h4,h5{
 .text_driver_real_time{
     font-size: 10px;
 }
+
 .circuito {
     position: relative;
     width: 100%;
 }
 
-.piloto {
+.firstPiloto {
     position: absolute;
     width: 10px; 
     height: 10px; 
     background-color: red; 
-    border-radius: 50%; 
-}
-
-.centro {
-    top: 54%; 
-    left: 55%;
+    border-radius: 50%;
     transform: translate(-50%, -50%);
 }
+
+.secondPiloto {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background-color: blue; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thirdPiloto {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background-color: green; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+} 

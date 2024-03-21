@@ -45,6 +45,8 @@
                             src="./video/vtts/subtitles-en.vtt">
                         <track id="es-sub" kind="subtitles" srclang="es" label="Spanish"
                             src="./video/vtts/subtitles-es.vtt">
+                        <track id="cat-sub" kind="subtitles" srclang="cat" label="Catalan"
+                            src="./video/vtts/subtitles-cat.vtt">
                         <track id="metadata-1" kind="metadata" label="Drivers_Circuits" src="./video/vtts/metadata.vtt">
                         <track id="metadata-2" kind="metadata" label="questions" src="./video/vtts/questions.vtt">
                         <track id="metadata-3" kind="metadata" label="firstPerson" src="./video/vtts/firstPerson.vtt">
@@ -111,22 +113,21 @@
 
                                     <div id="options_cuality" class="popover_selector_container hidden">
                                         <i data-target="options_cuality" class="fas fa-arrow-left"></i>
-                                        <button>1080</button>
-                                        <button>720</button>
-                                        <button>480</button>
-                                        <button>Auto</button>
+                                        <button class="button_quality active" value="1080">1080</button>
+                                        <button class="button_quality" value="720">720</button>
+                                        <button class="button_quality" value="480">480</button>
+                                        <button class="button_quality" value="auto">Auto</button>
                                     </div>
                                     <div id="options_lenguage" class="popover_selector_container hidden">
                                         <i data-target="options_lenguage" class="fas fa-arrow-left"></i>
                                         <button class="button-lenguage" value="en">Inglés</button>
                                         <button class="button-lenguage" value="es">Castellano</button>
                                         <button class="button-lenguage" value="cat">Catalán</button>
-                                        <button class="button-lenguage" value="ger">Alemán</button>
                                     </div>
                                     <div id="options_speed" class="popover_selector_container hidden">
                                         <i data-target="options_speed" class="fas fa-arrow-left"></i>
                                         <button class="button-speed" value="0.5">0.5</button>
-                                        <button class="button-speed" value="1">1</button>
+                                        <button class="button-speed active" value="1">1</button>
                                         <button class="button-speed" value="1.5">1.5</button>
                                         <button class="button-speed" value="2">2</button>
                                     </div>
@@ -178,13 +179,9 @@
 
                 <div class="card mb-3" style="border-left: none; border-bottom: none; border-radius: 1rem;">
                     <div id="circuit_real_time_container" class="card-body border_custom_container">
-                        <div class="circuito">
-                            <img class="card-img-top circuit_real_time" src="./Items/circuitos/barcelona/barcelona.png">
-                            <div class="piloto centro"></div>
+                        <div id="realTimeCircuit" class="circuito">
                         </div>
-                        <div class="circuit_real_time_name_container">
-                            <p class="text_driver_real_time" style="color: #D90404;">Carlos Sainz</p>
-                            <p class="text_driver_real_time" style="color: blue;">Fernando Alonso</p>
+                        <div id="realTimeDrivers" class="circuit_real_time_name_container">
                         </div>
                     </div>
                 </div>
