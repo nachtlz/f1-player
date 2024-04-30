@@ -23,12 +23,10 @@ def reemplazar_chunks_con_hashes(input_file_path, output_file_path, mapping):
                     line = line.replace(chunk_name, f'https://ipfs.io/ipfs/{mapping[chunk_name]}')
             file.write(line)
 
-# Rutas a los archivos
 archivo_hashes = ''
 archivo_m3u8 = ''
 archivo_salida = ''
 
-# Crear el mapping y procesar el archivo m3u8
 mapping_de_chunks = crear_mapping_de_chunks(archivo_hashes)
 reemplazar_chunks_con_hashes(archivo_m3u8, archivo_salida, mapping_de_chunks)
 
